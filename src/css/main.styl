@@ -1,0 +1,69 @@
+*
+    box-sizing border-box
+
+html
+    font-size 62.5%
+
+html, body
+    margin 0 auto
+    width 100%
+    height 100%
+    font-family: neue-haas-unica, sans-serif;
+    font-size: 16px
+
+:root
+    --main-yellow: #FBF778
+    --main-bg-color: #171259
+    --main-bg-work: #CDD7CF
+    --main-bg-primary: #FF6237
+    --main-bg-work: #CDD7CF
+    --main-work-primary: #FF6237
+    --main-bg-about: #E43E2C
+    --main-about-primary: #FFD24B
+    --main-bg-shop: #1C1C1C
+    --main-shop-primary: #E2E2E2
+
+
+body
+    font-size 16px
+    transition: background .3s ease-in
+
+h1,
+h2,
+h3,
+h4,
+h5 
+    font-family: p22-mackinac-pro, serif;
+
+h1 
+    font-size: clamp(2.563rem, 3.6vw + 1rem, 7.625rem)
+    line-height: 1.1
+    font-weight: 800
+    margin: 0
+
+// text animations
+h1, p, li
+    span
+        display inline-block
+        overflow hidden
+        vertical-align middle
+
+        & > span
+            display block
+            animation slideUp 0.8s cubic-bezier(0.075, 0.82, 0.165, 1) forwards
+            transform translate3d(0, 100%, 0)
+
+@keyframes slideUp
+    0%
+        transform translate3d(0, 100%, 0)
+
+    100%
+        transform translate3d(0, 0, 0)
+
+@import 'wrapper'
+@import 'button'
+@import 'increment'
+@import 'header'
+@import 'header-big'
+@import 'loader'
+@import 'pages/**'
