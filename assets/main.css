@@ -56,19 +56,25 @@ li span > span {
   transform: translate3d(0, 100%, 0);
 }
 .wrapper {
-  padding: 9rem 4rem 0 4rem;
+  padding: 9rem 2rem 0 2rem;
 }
 .front .wrapper {
   padding: 0;
+}
+body {
+  background-image: url("../assets/images/grain.png");
+  background-repeat: repeat;
+  background-size: 100px;
+  background-blend-mode: overlay;
 }
 .button {
   border: 1px solid var(--main-yellow);
 }
 .header {
   position: absolute;
-  left: 4rem;
-  right: 4rem;
-  top: 2.4rem;
+  left: 2rem;
+  right: 2rem;
+  top: 2rem;
   z-index: 10;
   display: flex;
   justify-content: space-between;
@@ -139,7 +145,7 @@ li span > span {
 }
 body.about {
   color: var(--main-about-primary);
-  background: var(--main-bg-about);
+  background-color: var(--main-bg-about);
 }
 body.about .logo path {
   fill: var(--main-about-primary);
@@ -149,7 +155,7 @@ body.about .logo path {
 }
 body.front {
   color: var(--main-yellow);
-  background: var(--main-bg-color);
+  background-color: var(--main-bg-color);
 }
 body.front .logo path {
   fill: var(--main-yellow);
@@ -157,9 +163,13 @@ body.front .logo path {
 .front .header nav a {
   color: var(--main-yellow);
 }
+.shadow-front {
+  width: 100%;
+  margin-top: -7rem;
+}
 body.shop {
   color: var(--main-shop-primary);
-  background: var(--main-bg-shop);
+  background-color: var(--main-bg-shop);
 }
 body.shop .logo path {
   fill: var(--main-shop-primary);
@@ -169,7 +179,7 @@ body.shop .logo path {
 }
 body.work {
   color: var(--main-work-primary);
-  background: var(--main-bg-work);
+  background-color: var(--main-bg-work);
 }
 body.work .logo path {
   fill: var(--main-work-primary);

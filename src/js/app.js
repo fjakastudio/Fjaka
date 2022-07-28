@@ -3,6 +3,8 @@ import JsPlugin from '@swup/js-plugin';
 import DebugPlugin from '@swup/debug-plugin';
 import SwupProgressPlugin from '@swup/progress-plugin';
 import SwupBodyClassPlugin from '@swup/body-class-plugin';
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 import { TweenMax } from 'gsap/TweenMax';
 import loadComponents from 'gia/loadComponents';
 import components from './components';
