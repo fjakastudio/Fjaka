@@ -27,21 +27,16 @@ body {
 body {
   font-size: 16px;
   transition: background 0.3s ease-in;
-}
-h1,
-h2,
-h3,
-h4,
-h5 {
-  font-family: p22-mackinac-pro, serif;
-}
-h1 {
-  font-size: clamp(2.563rem, 4.6vw, 7.625rem);
-  line-height: 1.1;
-  font-weight: 800;
-  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-kerning: normal;
+  -moz-font-feature-settings: "kern", "liga", "clig", "calt";
+  -ms-font-feature-settings: "kern", "liga", "clig", "calt";
+  -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
+  font-feature-settings: "kern", "liga", "clig", "calt";
 }
 h1 span,
+h2 span,
 p span,
 li span {
   display: inline-block;
@@ -49,6 +44,7 @@ li span {
   vertical-align: middle;
 }
 h1 span > span,
+h2 span > span,
 p span > span,
 li span > span {
   display: block;
@@ -67,8 +63,31 @@ body {
   background-size: 100px;
   background-blend-mode: overlay;
 }
-.button {
-  border: 1px solid var(--main-yellow);
+img {
+  max-width: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: p22-mackinac-pro, serif;
+  font-weight: 800;
+}
+h1 {
+  font-size: clamp(2.563rem, 4.6vw, 7.625rem);
+  line-height: 1.1;
+  margin: 0;
+}
+h2 {
+  font-size: clamp(2rem, 4.1vw, 5rem);
+  margin: 0 0 1.5rem;
+  line-height: 1.1;
+}
+.big-paragraph {
+  font-size: clamp(1rem, 1.5vw, 2rem);
+  line-height: 1.4;
+  margin: 0 0 1rem;
 }
 .header {
   position: absolute;
@@ -186,6 +205,46 @@ body.work .logo path {
 }
 .work .header nav a {
   color: var(--main-work-primary);
+}
+.btn {
+  padding: 1rem 2rem;
+  border-radius: 100px;
+  color: var(--btn-color);
+  text-decoration: none;
+  font-weight: 400;
+  transition: 0.3s ease-in;
+  display: inline-block;
+}
+.btn--outline {
+  border: 1px solid var(--btn-color);
+}
+.btn--outline:hover {
+  background-color: var(--btn-color);
+  color: var(--btn-text);
+}
+.case-intro {
+  color: var(--text-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.case-intro__text {
+  padding: 2rem;
+  background-color: var(--background-color);
+  flex-grow: 1;
+}
+.case-intro__pic {
+  display: block;
+  object-fit: cover;
+  max-height: 80vh;
+}
+.case-intro__text__inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.case-intro__text__inner > * {
+  width: 50%;
 }
 @-moz-keyframes slideUp {
   0% {

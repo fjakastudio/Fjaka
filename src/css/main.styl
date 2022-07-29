@@ -27,22 +27,16 @@ html, body
 body
     font-size 16px
     transition: background .3s ease-in
-
-h1,
-h2,
-h3,
-h4,
-h5 
-    font-family: p22-mackinac-pro, serif;
-
-h1 
-    font-size: clamp(2.563rem, 3.6vw + 1rem, 7.625rem)
-    line-height: 1.1
-    font-weight: 800
-    margin: 0
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-kerning: normal;
+    -moz-font-feature-settings: "kern", "liga", "clig", "calt";
+    -ms-font-feature-settings: "kern", "liga", "clig", "calt";
+    -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
+    font-feature-settings: "kern", "liga", "clig", "calt";
 
 // text animations
-h1, p, li
+h1, h2, p, li
     span
         display inline-block
         overflow hidden
@@ -61,9 +55,10 @@ h1, p, li
         transform translate3d(0, 0, 0)
 
 @import 'wrapper'
-@import 'button'
+@import 'typography'
 @import 'increment'
 @import 'header'
 @import 'header-big'
 @import 'loader'
 @import 'pages/**'
+@import 'elements/**'
