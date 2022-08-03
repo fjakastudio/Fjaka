@@ -12,7 +12,7 @@ export default class SeparateText extends Component {
     mount() {
         let newContent = "";
         this.element.innerText.split(' ').forEach(function (word, index) {
-            newContent += `<span><span style="animation-delay: ${ index * this.options.delay + 0.2 }s">${ word }</span></span> `;
+            newContent += `<span><span style="animation-delay: ${ index * this.options.delay + 0.1 }s">${ word }</span></span> `;
         }.bind(this));
         this.element.innerHTML = newContent;
     }

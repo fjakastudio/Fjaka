@@ -3,6 +3,7 @@ import JsPlugin from '@swup/js-plugin';
 import DebugPlugin from '@swup/debug-plugin';
 import SwupProgressPlugin from '@swup/progress-plugin';
 import SwupBodyClassPlugin from '@swup/body-class-plugin';
+import SwupScrollPlugin from '@swup/scroll-plugin';
 import 'lazysizes';
 import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 import { TweenMax } from 'gsap/TweenMax';
@@ -35,10 +36,23 @@ const swup = new Swup({
                     });
                 }
             },
+            {
+                from: '/work.html',
+                to: 'case-transition',
+                in: (next) => {
+                },
+                out: (next) => {
+                    TweenMax.to(document.querySelector('.active .case-small__inner'), .6, 
+                    {css:{scaleY:"6", zindex:"10"}, ease: 'cubic-bezier(0.075, 0.82, 0.165, 1)', 
+                    onComplete: next
+                    });
+                }
+            },
         ]),
         new DebugPlugin(),
         new SwupProgressPlugin(),
-        new SwupBodyClassPlugin()
+        new SwupBodyClassPlugin(),
+        new SwupScrollPlugin()
     ]
 });
 
@@ -46,9 +60,31 @@ const bodyClassPlugin = new SwupBodyClassPlugin({
     prefix: 'page-'
 });
 
+document.querySelectorAll('li').forEach(item => {
+    item.addEventListener('click', event => {
+        document.querySelectorAll('li').forEach(i => {i.classList.remove('active')})
+        item.classList.add('active')
+    })
+})
+
+
+document.querySelectorAll('.case-small').forEach(item => {
+    item.addEventListener('click', event => {
+        document.querySelectorAll('case-small').forEach(i => {i.classList.remove('active')})
+        item.classList.add('active')
+    })
+})
+
 // reload components for each container after transition
 swup.on('contentReplaced', function () {
     document.querySelectorAll('[data-swup]').forEach(function (container) {
         loadComponents(components, container);
+
+        document.querySelectorAll('.case-small').forEach(item => {
+            item.addEventListener('click', event => {
+                document.querySelectorAll('case-small').forEach(i => {i.classList.remove('active')})
+                item.classList.add('active')
+            })
+        })
     });
 });

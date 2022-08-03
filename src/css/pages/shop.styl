@@ -7,3 +7,51 @@ body.shop .logo path
 
 .shop .header nav a
     color: var(--main-shop-primary)
+
+.shop .header nav a::before 
+    background: var(--main-shop-primary)
+
+.small-header
+    width: 52.6388888889%
+    text-align: center
+    margin: 0 auto 5vw
+
+.shop-wrapper
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+
+.shop-item 
+    width: calc(50% - 1.5rem);
+    margin-right: 2.5rem;
+    margin-bottom: 6vw;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1)
+    animation-delay: .8s;
+    opacity: 0
+
+    &:nth-child(2)
+        animation-delay: 1s;
+
+    &:nth-child(3)
+        animation-delay: 1.2s;
+
+    &:nth-child(2n)
+        margin-right: 0
+
+    img 
+        margin-bottom: 1.5rem
+
+    .heading-four
+        margin: 0
+
+    .shop-item__text
+        margin: 1rem 0 0 0
+
+    .shop-item__price
+        opacity: .6
+        margin: 0
+
+.shop-item__details 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;

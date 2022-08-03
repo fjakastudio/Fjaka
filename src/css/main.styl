@@ -17,12 +17,12 @@ html, body
     --main-bg-work: #CDD7CF
     --main-bg-primary: #FF6237
     --main-bg-work: #CDD7CF
+    --main-stroke-work: #93A998
     --main-work-primary: #FF6237
     --main-bg-about: #E43E2C
     --main-about-primary: #FFD24B
     --main-bg-shop: #1C1C1C
     --main-shop-primary: #E2E2E2
-
 
 body
     font-size 16px
@@ -36,7 +36,7 @@ body
     font-feature-settings: "kern", "liga", "clig", "calt";
 
 // text animations
-h1, h2, p, li
+h1, h2, p, li, a
     span
         display inline-block
         overflow hidden
@@ -44,8 +44,20 @@ h1, h2, p, li
 
         & > span
             display block
-            animation slideUp 0.8s cubic-bezier(0.075, 0.82, 0.165, 1) forwards
+            animation slideUp 1s cubic-bezier(0.075, 0.82, 0.165, 1) forwards
             transform translate3d(0, 100%, 0)
+
+.delay-text
+    span
+        display inline-block
+        overflow hidden
+        vertical-align middle
+
+        & > span
+            display block
+            animation slideUp 1s cubic-bezier(0.075, 0.82, 0.165, 1) forwards
+            transform translate3d(0, 100%, 0)
+            animation-delay: .6s
 
 @keyframes slideUp
     0%
@@ -54,6 +66,7 @@ h1, h2, p, li
     100%
         transform translate3d(0, 0, 0)
 
+@import 'animate.css';
 @import 'wrapper'
 @import 'typography'
 @import 'increment'

@@ -2,8 +2,103 @@ body.work
     color: var(--main-work-primary)
     background-color: var(--main-bg-work)
 
+.work .wrapper
+    background-image: url('../assets/images/pen.svg')
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+    background-size: 500px;
+
 body.work .logo path
     fill: var(--main-work-primary)
 
 .work .header nav a
     color: var(--main-work-primary)
+
+.work .header nav a::before 
+    background: var(--main-work-primary)
+
+.work .wrapper 
+    padding: 9rem 0 0 0
+
+.work .wrapper-inner
+    padding: 0 2rem
+
+.case-wrapper
+    margin-top: 11vw
+
+.animate__animated.case-small
+    animation-duration: .6s
+
+.case-small:last-child .case-small__inner:hover
+    transform: translateY(0)
+
+.active.case-small
+    z-index: 2
+    border-top: none
+
+.active .case-small__inner
+    background: var(--background)
+    color: var(--text)
+    border-top: none
+    transform-origin: center center
+
+.active .case-small__inner > *
+    opacity: 0
+
+.case-small__inner
+    display: flex
+    border-top: .5px solid var(--main-stroke-work)
+    background-color: var(--main-bg-work)
+    padding: 1.5rem 2rem 2rem;
+    width: 100%
+    transition: .6s cubic-bezier(0.075, 0.82, 0.165, 1)
+    
+    &:hover
+        position: absolute;
+        transform: translateY(-2.5rem)
+        background: var(--background)
+        color: var(--text)
+
+        .btn-category 
+            border-color: var(--text)
+            color: var(--text)
+
+.case-small
+    background-color: var(--main-bg-work)
+    display: flex
+    margin-top: -80px
+    position relative
+    transition: .3s
+    height: 160px;
+    width: 100%
+    animation-delay: .6s;
+
+    a 
+        position absolute
+        top: 0
+        right: 0
+        left: 0
+        bottom: 0
+
+    &:nth-child(2)
+        animation-delay: (.6s+.2s);
+
+    &:nth-child(3)
+        animation-delay: (.6s+.4s);
+
+    &:nth-child(4)
+        animation-delay: (.6s+.6s);
+
+    &:nth-child(5)
+        animation-delay: (.6s+.8s);
+
+    &:nth-child(6)
+        animation-delay: 1s;
+
+    h2 
+        font-size: clamp(3.375rem, 4vw + 1.25rem, 5.625rem);
+        line-height: 1.1
+        margin-right: 1rem
+
+.category-wrapper
+    display: flex

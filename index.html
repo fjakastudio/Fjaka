@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://use.typekit.net/prw8hpu.css">
     <link rel="stylesheet" href="./assets/normalize.css">
     <link rel="stylesheet" href="./assets/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body class="front">
     <header class="header">
@@ -45,19 +46,23 @@
         </nav>
     </header>
 
+    <span class="transition-circle"></span>
+
     <main class="wrapper" id="swup">
         
         <div class="header-big">
             
             <h1 g-component="SeparateText" class="heading-one">We’re a design studio that mixes digital and branding to create <span>amazing websites</span></h1>
-            <a href="work"                 
-            class="btn btn--outline"
-            style="--btn-color: #FBF778;
-            --btn-text: #2C2490;" title="work">Explore works</a>
-            <button                 
-            class="btn btn--outline"
-            style="--btn-color: #FBF778;
-            --btn-text: #2C2490;">See showreel</button>
+            <div class="btn-wrapper">
+                <a href="./work.html"                 
+                class="btn btn--outline"
+                style="--btn-color: #FBF778;
+                --btn-text: #2C2490;" title="work">Explore works</a>
+                <button                 
+                class="btn btn--outline"
+                style="--btn-color: #FBF778;
+                --btn-text: #2C2490;">See showreel</button>
+            </div>
 
             <div class="header-big__bg">
                 <iframe title="Fiasco Design Showreel 2022" src="https://player.vimeo.com/video/667297305?h=6bd9f8bdc5&amp;dnt=1&amp;app_id=122963&amp;controls=0&amp;hd=1&amp;autohide=1&amp;muted=1&amp;autoplay=1&amp;loop=1&amp;portrait=0&amp;byline=0&amp;title=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="" data-ready="true"></iframe>
@@ -74,8 +79,8 @@
             alt="shadow">
 
             <div class="front-info__text">
-                <h2 class="heading-two">
-                    We’re an independent branding and experience design company working at the intersection of design and technology.  
+                <h2 g-component="SeparateText" class="heading-one">
+                    Some of our latest and greatest work 
                 </h2>
             </div>
 

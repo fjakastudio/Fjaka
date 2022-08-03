@@ -1,0 +1,73 @@
+body.nori 
+    background-color: #F3F5F6
+    transition: 0s;
+
+body.nori .logo path 
+    fill: #4050F7
+
+.nori a
+    color: #4050F7
+
+.nori .header nav a::before 
+    background: #4050F7   
+
+.case .wrapper-inner
+    padding: 0 2.5rem;
+    display: grid;
+    // grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 2.5rem;
+    color: var(--text)
+
+    &--dark
+        background: #1e1e1e
+        margin-top: 11.112vw;
+        color: #E2E2E2
+        padding-top: 5.556vw
+
+.case-pic-big
+    height: 70vh;
+    min-height: 25rem
+    width: 100%;
+    object-fit: cover;
+
+.case-header
+    margin: 0 0 5vw
+
+.case-pic
+    margin: 0
+    border-radius: 6px
+    overflow: hidden
+
+    img
+        display: block
+
+// Grid settings
+.col
+    margin-bottom: 5.556vw
+
+    &--no-margin
+        margin-bottom: 0
+
+    img
+        object-fit: cover
+
+.col *:last-child
+    margin-bottom: 0
+
+.col-6
+    grid-column: span 6;
+
+.col-4
+    grid-column: span 4;
+
+.col-8
+    grid-column: span 8;
+
+.col-12
+    grid-column: span 12;
+
+.col figure,
+.col img
+    height: 100%
+    
