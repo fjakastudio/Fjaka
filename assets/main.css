@@ -1624,17 +1624,22 @@ body.work .logo path {
 }
 .big-footer {
   background: var(--background-footer);
-  background: linear-gradient(180deg, #6f8f72 60%, #5e7961 60%);
   color: var(--background-footer-text);
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-gap: 2.5rem;
-  padding-top: 11.112vw;
-  padding-bottom: 11.112vw;
+  padding-top: 6.112vw;
+  padding-bottom: 20vw;
   border-radius: 4rem 4rem 0 0;
   margin-top: -5rem;
   position: relative;
   overflow: hidden;
+}
+.big-footer--dark {
+  background: linear-gradient(180deg, #6f8f72 68%, #5e7961 68%);
+}
+.big-footer--blue {
+  background: linear-gradient(180deg, #0081a7 68%, #006280 68%);
 }
 .big-footer__center {
   grid-column-start: 4;
