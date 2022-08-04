@@ -1,7 +1,6 @@
 import Swup from 'swup';
 import JsPlugin from '@swup/js-plugin';
 import DebugPlugin from '@swup/debug-plugin';
-import SwupProgressPlugin from '@swup/progress-plugin';
 import SwupBodyClassPlugin from '@swup/body-class-plugin';
 import SwupScrollPlugin from '@swup/scroll-plugin';
 import 'lazysizes';
@@ -9,6 +8,7 @@ import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 import { TweenMax } from 'gsap/TweenMax';
 import loadComponents from 'gia/loadComponents';
 import components from './components';
+import AOS from 'aos';
 
 // enable components
 loadComponents(components);
@@ -50,7 +50,6 @@ const swup = new Swup({
             },
         ]),
         new DebugPlugin(),
-        new SwupProgressPlugin(),
         new SwupBodyClassPlugin(),
         new SwupScrollPlugin()
     ]
@@ -59,6 +58,8 @@ const swup = new Swup({
 const bodyClassPlugin = new SwupBodyClassPlugin({
     prefix: 'page-'
 });
+
+AOS.init();
 
 document.querySelectorAll('li').forEach(item => {
     item.addEventListener('click', event => {
@@ -79,6 +80,8 @@ document.querySelectorAll('.case-small').forEach(item => {
 swup.on('contentReplaced', function () {
     document.querySelectorAll('[data-swup]').forEach(function (container) {
         loadComponents(components, container);
+        
+        AOS.init();
 
         document.querySelectorAll('.case-small').forEach(item => {
             item.addEventListener('click', event => {
