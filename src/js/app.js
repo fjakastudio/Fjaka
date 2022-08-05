@@ -34,6 +34,14 @@ const swup = new Swup({
                             item.classList.add('active')
                         })
                     })
+
+                    var animation = bodymovin.loadAnimation({
+                        container: document.getElementById('hand'),
+                        renderer: 'svg',
+                        loop: true,
+                        autoplay: true,
+                        path: '../assets/lottie/ball.json'
+                    })
                 },
                 out: (next) => {
                     document.querySelector('#swup').style.opacity = 1;
@@ -79,7 +87,7 @@ var animation = bodymovin.loadAnimation({
     loop: true,
     autoplay: true,
     path: '../assets/lottie/ball.json'
-  })
+})
 
 AOS.init();
 
@@ -216,6 +224,14 @@ swup.on('contentReplaced', function () {
                 document.querySelectorAll('case-small').forEach(i => {i.classList.remove('active')})
                 item.classList.add('active')
             })
+        })
+
+        var animation = bodymovin.loadAnimation({
+            container: document.getElementById('hand'),
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: '../assets/lottie/ball.json'
         })
     });
 });
