@@ -74,11 +74,11 @@ const bodyClassPlugin = new SwupBodyClassPlugin({
 });
 
 var animation = bodymovin.loadAnimation({
-    container: document.getElementById('bm'),
+    container: document.getElementById('hand'),
     renderer: 'svg',
     loop: true,
     autoplay: true,
-    path: '../data.json'
+    path: '../assets/lottie/ball.json'
   })
 
 AOS.init();

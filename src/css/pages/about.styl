@@ -10,3 +10,89 @@ body.about .logo path
 
 .about .header nav a::before 
     background: var(--main-about-primary)   
+
+.about .wrapper
+    background-image: url('../assets/images/lines-bg.png')
+    background-position: 45% 0;
+    background-size: 2759px;
+    background-repeat: no-repeat;
+    padding: 0
+
+.about .wrapper-inner
+    padding: 0 2.5rem
+
+    &--burgundy
+        background: url('../assets/images/shadow-dissolve-burgundy.png') no-repeat;
+        background-color: #572A40
+        color: #ECD444 !important
+        padding-top: calc(7rem+11.112vw) // 7 to match red-brick margin-bottom
+        padding-bottom: 5.556vw;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-gap: 2.5rem;
+        color: var(--text)
+
+    &--pink
+        background: url('../assets/images/bg-about.png') repeat;
+        background-size: 130px
+        background-color: #FE938C
+        color: #243119 !important
+        padding-top: 5.556vw;
+        padding-bottom: 11.112vw;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-gap: 2.5rem;
+        color: var(--text)
+
+.red-brick
+    margin-bottom: -7.556vw; // Margin minus to get burgundy section to fall behind
+
+.wrapper-about
+    max-width: 50rem
+    margin: 0 auto
+    padding: 0 2.5rem 2rem
+
+.about-hand
+    position: relative;
+    height: 41rem;
+    margin-bottom: 2rem
+
+.hand-ball-graphic
+    position: absolute;
+    bottom: 0;
+    left: -130px;
+    right: 0;
+    margin: 0 auto;
+
+@keyframes upNdown {
+    0% {transform: translateY(0px);}
+    50% {transform: translateY(-5px);}
+    100%{transform: translateY(0px);}
+}
+
+#hand
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    max-width: 400px;
+    margin-top: 40px;
+    left: -50px;
+    right: 0;
+    margin: 50px auto 0;
+    animation-name: upNdown;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+
+.col-text
+    width: calc(50% - 1.25rem)
+    float: left
+    margin-right: 2.5rem
+
+    &:last-child
+        margin-right: 0
+
+.row
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 2.5rem;
+    color: var(--text)
