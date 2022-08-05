@@ -89,6 +89,14 @@ var animation = bodymovin.loadAnimation({
     path: '../assets/lottie/ball.json'
 })
 
+var animation = bodymovin.loadAnimation({
+    container: document.getElementById('front-hand'),
+    renderer: 'svg',
+    loop: false,
+    autoplay: true,
+    path: '../assets/lottie/arms-button.json'
+})
+
 AOS.init();
 
 var prevScrollpos = window.pageYOffset;

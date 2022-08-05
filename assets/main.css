@@ -13,7 +13,7 @@ body {
   font-size: 16px;
 }
 :root {
-  --main-yellow: #fbf778;
+  --main-yellow: #f5b1bc;
   --main-bg-color: #171259;
   --main-bg-work: #cdd7cf;
   --main-bg-primary: #ff6237;
@@ -1167,6 +1167,11 @@ p,
   transform-origin: 0% 50%;
   transform: scale3d(1, 1, 1);
 }
+.uppercase {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+}
 .header {
   position: fixed;
   left: 2.5rem;
@@ -1256,7 +1261,7 @@ p,
   left: -5%;
   right: 0;
   bottom: 0;
-  opacity: 0.5;
+  opacity: 0.3;
   z-index: -5;
 }
 .swup-progress-bar {
@@ -1492,6 +1497,12 @@ body.nori .logo path {
 .col img {
   height: 100%;
 }
+.front .wrapper-inner {
+  padding: 11.112vw;
+}
+.front .wrapper {
+  position: relative;
+}
 body.front {
   color: var(--main-yellow);
   background-color: var(--main-bg-color);
@@ -1550,6 +1561,12 @@ body.shop .logo path {
   width: 52.6388888889%;
   text-align: center;
   margin: 0 auto 5vw;
+}
+.shop .wrapper {
+  padding: 9rem 0 0 0;
+}
+.shop .wrapper-inner {
+  margin-bottom: 5rem;
 }
 .shop-wrapper {
   display: flex;
