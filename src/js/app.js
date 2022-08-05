@@ -42,6 +42,22 @@ const swup = new Swup({
                         autoplay: true,
                         path: '../assets/lottie/ball.json'
                     })
+
+                    var animation = bodymovin.loadAnimation({
+                        container: document.getElementById('stars'),
+                        renderer: 'svg',
+                        loop: true,
+                        autoplay: true,
+                        path: '../assets/lottie/shining-process.json'
+                    })
+                    
+                    var animation = bodymovin.loadAnimation({
+                        container: document.getElementById('stars-2'),
+                        renderer: 'svg',
+                        loop: true,
+                        autoplay: true,
+                        path: '../assets/lottie/shining-process.json'
+                    })
                 },
                 out: (next) => {
                     document.querySelector('#swup').style.opacity = 1;
@@ -95,6 +111,22 @@ var animation = bodymovin.loadAnimation({
     loop: false,
     autoplay: true,
     path: '../assets/lottie/arms-button.json'
+})
+
+var animation = bodymovin.loadAnimation({
+    container: document.getElementById('stars'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: '../assets/lottie/shining-process.json'
+})
+
+var animation = bodymovin.loadAnimation({
+    container: document.getElementById('stars-2'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: '../assets/lottie/shining-process.json'
 })
 
 AOS.init();

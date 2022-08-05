@@ -1517,6 +1517,23 @@ body.nori .logo path {
   border-radius: 4rem;
   display: block;
 }
+#stars path,
+#stars-2 path {
+  fill: var(--main-yellow);
+}
+#stars {
+  position: absolute;
+  left: 10%;
+  width: 300px;
+  top: 15%;
+}
+#stars-2 {
+  position: absolute;
+  right: 10%;
+  width: 300px;
+  top: 15%;
+  transform: rotate(180deg);
+}
 body.front {
   color: var(--main-yellow);
   background-color: var(--main-bg-color);
