@@ -1171,6 +1171,7 @@ p,
   text-transform: uppercase;
   text-align: center;
   font-weight: 600;
+  line-height: 1.3;
 }
 .header {
   position: fixed;
@@ -1502,6 +1503,19 @@ body.nori .logo path {
 }
 .front .wrapper {
   position: relative;
+}
+.img-text {
+  position: relative;
+  position: relative;
+  height: 3rem;
+  overflow: visible;
+  padding: 0 0.5rem;
+}
+.img-text img {
+  height: 4rem;
+  margin-top: -0.7rem;
+  border-radius: 4rem;
+  display: block;
 }
 body.front {
   color: var(--main-yellow);
