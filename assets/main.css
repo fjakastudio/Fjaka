@@ -1804,6 +1804,9 @@ body.work .logo path {
   flex-direction: row;
   justify-content: space-around;
 }
+.case-intro__text__inner p {
+  margin-top: 1rem;
+}
 .case-intro__text__inner > * {
   width: 50%;
 }
