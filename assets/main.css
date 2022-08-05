@@ -1065,7 +1065,7 @@ h5 {
 }
 .big-header-one {
   font-size: clamp(3.375rem, 6.05vw, 5.625rem);
-  line-height: 1;
+  line-height: 1.07;
   margin: 0 0 2rem;
 }
 h1,
@@ -1284,7 +1284,7 @@ body.about .logo path {
 }
 .about .wrapper {
   background-image: url("../assets/images/lines-bg.png");
-  background-position: 45% 0;
+  background-position: 45% -10px;
   background-size: 2759px;
   background-repeat: no-repeat;
   padding: 0;
@@ -1622,6 +1622,9 @@ body.work .logo path {
 .animate__animated.case-small {
   animation-duration: 0.6s;
 }
+.case-small:last-child {
+  height: 210px;
+}
 .case-small:last-child .case-small__inner:hover {
   transform: translateY(0);
 }
@@ -1645,6 +1648,7 @@ body.work .logo path {
   padding: 1.5rem 2rem 2rem;
   width: 100%;
   transition: 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+  height: 100%;
 }
 .case-small__inner:hover {
   position: absolute;
@@ -1686,7 +1690,22 @@ body.work .logo path {
   animation-delay: 1.4s;
 }
 .case-small:nth-child(6) {
-  animation-delay: 1s;
+  animation-delay: 1.6s;
+}
+.case-small:nth-child(7) {
+  animation-delay: 1.8s;
+}
+.case-small:nth-child(8) {
+  animation-delay: 2s;
+}
+.case-small:nth-child(9) {
+  animation-delay: 2.2s;
+}
+.case-small:nth-child(10) {
+  animation-delay: 2.4s;
+}
+.case-small:nth-child(11) {
+  animation-delay: 2.6s;
 }
 .case-small h2 {
   font-size: clamp(3.375rem, 5.25vw, 5.625rem);
@@ -1778,6 +1797,9 @@ body.work .logo path {
 }
 .big-footer--green {
   background: linear-gradient(180deg, #1d7260 68%, #166353 68%);
+}
+.big-footer--margin {
+  margin-top: -2rem;
 }
 .big-footer__center {
   grid-column-start: 4;

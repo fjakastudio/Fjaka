@@ -29,6 +29,9 @@ body.work .logo path
 .animate__animated.case-small
     animation-duration: .6s
 
+.case-small:last-child 
+    height: 210px
+
 .case-small:last-child .case-small__inner:hover
     transform: translateY(0)
 
@@ -52,6 +55,7 @@ body.work .logo path
     padding: 1.5rem 2rem 2rem;
     width: 100%
     transition: .6s cubic-bezier(0.075, 0.82, 0.165, 1)
+    height: 100%
     
     &:hover
         position: absolute;
@@ -93,8 +97,22 @@ body.work .logo path
         animation-delay: (.6s+.8s);
 
     &:nth-child(6)
-        animation-delay: 1s;
+        animation-delay: (.6s+1s);     
 
+    &:nth-child(7)
+        animation-delay: (.6s+1.2s); 
+
+    &:nth-child(8)
+        animation-delay: (.6s+1.4s); 
+
+    &:nth-child(9)
+        animation-delay: (.6s+1.6s);   
+
+    &:nth-child(10)
+        animation-delay: (.6s+1.8s); 
+
+    &:nth-child(11)
+        animation-delay: (.6s+2s);
     h2 
         font-size: clamp(3.375rem, 4vw + 1.25rem, 5.625rem);
         line-height: 1.1
