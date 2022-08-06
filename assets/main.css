@@ -22,7 +22,7 @@ body {
   --main-work-primary: #ff6237;
   --main-bg-about: #e43e2c;
   --main-about-primary: #ffd24b;
-  --main-bg-shop: #1c1c1c;
+  --main-bg-shop: #131313;
   --main-shop-primary: #e2e2e2;
 }
 body {
@@ -1181,6 +1181,13 @@ p,
   top: 0;
   z-index: 1;
 }
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+.small-margin {
+  margin: 0 0 0.5rem;
+}
 .header {
   position: fixed;
   left: 2.5rem;
@@ -1505,6 +1512,47 @@ body.nori .logo path {
 .col figure,
 .col img {
   height: 100%;
+}
+.push-4-11 {
+  grid-column-start: 5;
+  grid-column-end: 12;
+}
+.push-4-8 {
+  grid-column-start: 5;
+  grid-column-end: 9;
+}
+body.contact {
+  color: #2cafc7;
+  background-color: #131313;
+}
+body.contact .logo path {
+  fill: #2cafc7;
+}
+.contact .header nav a {
+  color: #2cafc7;
+}
+.contact .header nav a::before {
+  background: #2cafc7;
+}
+.contact .wrapper {
+  background: url("../assets/images/stars.svg") repeat;
+}
+.contact .wrapper-inner {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 2.5rem;
+}
+.contact-graphic {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+h5,
+.heading-five {
+  font-size: clamp(1.5rem, 2.5vw, 3rem);
+  margin: 0 0 1rem;
+  line-height: 1.1;
+  letter-spacing: 0.5px;
 }
 .front .wrapper-inner {
   padding: 11.112vw;
