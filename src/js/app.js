@@ -1,6 +1,5 @@
 import Swup from 'swup';
 import JsPlugin from '@swup/js-plugin';
-import DebugPlugin from '@swup/debug-plugin';
 import SwupBodyClassPlugin from '@swup/body-class-plugin';
 import SwupScrollPlugin from '@swup/scroll-plugin';
 import 'lazysizes';
@@ -48,6 +47,7 @@ const swup = new Swup({
                         renderer: 'svg',
                         loop: true,
                         autoplay: true,
+                        speed: 0.5,
                         path: '../assets/lottie/shining-process.json'
                     })
                     
@@ -56,6 +56,7 @@ const swup = new Swup({
                         renderer: 'svg',
                         loop: true,
                         autoplay: true,
+                        speed: 0.5,
                         path: '../assets/lottie/shining-process.json'
                     })
                 },
@@ -81,13 +82,12 @@ const swup = new Swup({
                 },
                 out: (next) => {
                     TweenMax.to(document.querySelector('.active .case-small__inner'), .4, 
-                    {css:{scaleY:"6", zindex:"10"}, ease: 'cubic-bezier(0.075, 0.82, 0.165, 1)', 
+                    {css:{scaleY:"8", zindex:"10"}, ease: 'cubic-bezier(0.075, 0.82, 0.165, 1)', 
                     onComplete: next
                     });
                 }
             },
         ]),
-        new DebugPlugin(),
         new SwupBodyClassPlugin(),
         new SwupScrollPlugin()
     ]
@@ -118,6 +118,7 @@ var animation = bodymovin.loadAnimation({
     renderer: 'svg',
     loop: true,
     autoplay: true,
+    speed: 0.1,
     path: '../assets/lottie/shining-process.json'
 })
 
@@ -126,6 +127,7 @@ var animation = bodymovin.loadAnimation({
     renderer: 'svg',
     loop: true,
     autoplay: true,
+    speed: 0.1,
     path: '../assets/lottie/shining-process.json'
 })
 
