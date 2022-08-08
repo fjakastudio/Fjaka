@@ -1511,6 +1511,32 @@ body.glyfit .logo path {
 .glyfit .header nav a::before {
   background: #1e1e1e;
 }
+body.friend-420 {
+  background-color: #e6dfc8;
+  transition: 0s;
+}
+body.friend-420 .logo path {
+  fill: #405c41;
+}
+.friend-420 .text-link {
+  color: #405c41;
+}
+.friend-420 .header nav a::before {
+  background: #405c41;
+}
+body.friend-jen {
+  background-color: #fff7f0;
+  transition: 0s;
+}
+body.friend-jen .logo path {
+  fill: #1d7260;
+}
+.friend-jen .text-link {
+  color: #1d7260;
+}
+.friend-jen .header nav a::before {
+  background: #1d7260;
+}
 .case .wrapper-inner {
   padding: 0 2.5rem;
   display: grid;
@@ -1544,6 +1570,9 @@ body.glyfit .logo path {
 }
 .case .wrapper-inner--footer-margin {
   margin-bottom: 5rem;
+}
+.case .wrapper-inner--no-header {
+  margin-top: 8rem;
 }
 .case-pic-big {
   height: 70vh;
@@ -1621,6 +1650,10 @@ body.glyfit .logo path {
   grid-column-end: 12;
 }
 .push-4-8 {
+  grid-column-start: 5;
+  grid-column-end: 9;
+}
+.push-5-9 {
   grid-column-start: 5;
   grid-column-end: 9;
 }
