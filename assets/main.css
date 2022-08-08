@@ -1055,6 +1055,10 @@ body {
 img {
   max-width: 100%;
 }
+.no-max {
+  max-width: none;
+  width: 100%;
+}
 h1,
 h2,
 h3,
@@ -1316,6 +1320,7 @@ body.about .logo path {
 .about .wrapper-inner--burgundy {
   background: url("../assets/images/shadow-dissolve-burgundy.png") no-repeat;
   background-color: #572a40;
+  background-size: auto 100%;
   color: #ecd444 !important;
   padding-top: calc(7rem + 11.112vw);
   padding-bottom: 5.556vw;
@@ -1340,9 +1345,10 @@ body.about .logo path {
   margin-bottom: -7.556vw;
 }
 .wrapper-about {
-  max-width: 50rem;
+  width: 55vw;
   margin: 0 auto;
-  padding: 0 2.5rem 2rem;
+  padding: 0 2.5rem 5.556vw;
+  max-width: 65rem;
 }
 .about-hand {
   position: relative;
@@ -1453,6 +1459,58 @@ body.hom .logo path {
 .hom .header nav a::before {
   background: #dc5842;
 }
+body.ls {
+  background-color: #000;
+  transition: 0s;
+}
+body.ls .logo path {
+  fill: #dfe1eb;
+}
+.ls .text-link {
+  color: #dfe1eb;
+}
+.ls .header nav a::before {
+  background: #dfe1eb;
+}
+body.mtn {
+  background-color: #cecfd0;
+  transition: 0s;
+}
+body.mtn .logo path {
+  fill: #161616;
+}
+.mtn .text-link {
+  color: #161616;
+}
+.mtn .header nav a::before {
+  background: #161616;
+}
+body.glasin {
+  background-color: #edf0f3;
+  transition: 0s;
+}
+body.glasin .logo path {
+  fill: #1d1e1b;
+}
+.glasin .text-link {
+  color: #1d1e1b;
+}
+.glasin .header nav a::before {
+  background: #1d1e1b;
+}
+body.glyfit {
+  background-color: #efeee8;
+  transition: 0s;
+}
+body.glyfit .logo path {
+  fill: #1e1e1e;
+}
+.glyfit .text-link {
+  color: #1e1e1e;
+}
+.glyfit .header nav a::before {
+  background: #1e1e1e;
+}
 .case .wrapper-inner {
   padding: 0 2.5rem;
   display: grid;
@@ -1465,6 +1523,10 @@ body.hom .logo path {
   margin-top: 5.556vw;
   color: #e2e2e2;
   padding-top: 11.112vw;
+  padding-bottom: 11.112vw;
+}
+.case .wrapper-inner--white {
+  background: #fff;
   padding-bottom: 11.112vw;
 }
 .case .wrapper-inner--margin-bottom {
@@ -1480,11 +1542,16 @@ body.hom .logo path {
 .case .wrapper-inner--margin {
   padding-top: 5.556vw;
 }
+.case .wrapper-inner--footer-margin {
+  margin-bottom: 5rem;
+}
 .case-pic-big {
   height: 70vh;
   min-height: 25rem;
+  max-height: 40rem;
   width: 100%;
   object-fit: cover;
+  object-position: bottom;
 }
 .case-header {
   margin: 0 0 5vw;
@@ -1505,6 +1572,9 @@ body.hom .logo path {
 }
 .col--no-margin {
   margin-bottom: 0;
+}
+.col--stick-margin {
+  margin-bottom: -2.5rem;
 }
 .col img {
   object-fit: cover;
@@ -1542,6 +1612,10 @@ body.hom .logo path {
 .col img {
   height: 100%;
 }
+.push-3-11 {
+  grid-column-start: 3;
+  grid-column-end: 11;
+}
 .push-4-11 {
   grid-column-start: 5;
   grid-column-end: 12;
@@ -1561,6 +1635,7 @@ body.hom .logo path {
   width: 100%;
   object-fit: cover;
   height: 100vh;
+  display: block;
 }
 body.contact {
   color: #2cafc7;

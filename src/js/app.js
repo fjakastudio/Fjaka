@@ -82,7 +82,7 @@ const swup = new Swup({
                 },
                 out: (next) => {
                     TweenMax.to(document.querySelector('.active .case-small__inner'), .4, 
-                    {css:{scaleY:"8", zindex:"10"}, ease: 'cubic-bezier(0.075, 0.82, 0.165, 1)', 
+                    {css:{scaleY:"14", zindex:"10"}, ease: 'cubic-bezier(0.075, 0.82, 0.165, 1)', 
                     onComplete: next
                     });
                 }
