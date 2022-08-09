@@ -80,6 +80,22 @@ const swup = new Swup({
                 from: '/work.html',
                 to: 'case-transition',
                 in: (next) => {
+
+                    var glide = new Glide('.glide', {
+                        type: 'carousel',
+                        perView: 2,
+                        focusAt: 1,
+                        breakpoints: {
+                          800: {
+                            perView: 2
+                          },
+                          480: {
+                            perView: 1
+                          }
+                        }
+                    })
+
+                    glide.mount()
                 },
                 out: (next) => {
                     TweenMax.to(document.querySelector('.active .case-small__inner'), .8, 
@@ -178,7 +194,7 @@ var glide = new Glide('.glide', {
     }
 })
   
-  glide.mount()
+glide.mount()
 // reload components for each container after transition
 swup.on('contentReplaced', function () {
     document.querySelectorAll('[data-swup]').forEach(function (container) {
