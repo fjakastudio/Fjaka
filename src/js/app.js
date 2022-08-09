@@ -5,6 +5,7 @@ import SwupScrollPlugin from '@swup/scroll-plugin';
 import 'lazysizes';
 import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 import { TweenMax } from 'gsap/TweenMax';
+import Glide from '@glidejs/glide'
 import loadComponents from 'gia/loadComponents';
 import components from './components';
 import AOS from 'aos';
@@ -81,7 +82,7 @@ const swup = new Swup({
                 in: (next) => {
                 },
                 out: (next) => {
-                    TweenMax.to(document.querySelector('.active .case-small__inner'), .4, 
+                    TweenMax.to(document.querySelector('.active .case-small__inner'), .8, 
                     {css:{scaleY:"14", zindex:"10"}, ease: 'cubic-bezier(0.075, 0.82, 0.165, 1)', 
                     onComplete: next
                     });
@@ -149,6 +150,7 @@ document.querySelectorAll('li').forEach(item => {
     item.addEventListener('click', event => {
         document.querySelectorAll('li').forEach(i => {i.classList.remove('active')})
         item.classList.add('active')
+        document.querySelectorAll('text-link').classList.remove('active')
     })
 })
 
@@ -157,11 +159,26 @@ document.querySelectorAll('.case-small').forEach(item => {
     item.addEventListener('click', event => {
         document.querySelectorAll('case-small').forEach(i => {i.classList.remove('active')})
         item.classList.add('active')
+        document.querySelectorAll('text-link').classList.remove('active')
     })
 })
 
 
-
+var glide = new Glide('.glide', {
+    type: 'carousel',
+    perView: 2,
+    focusAt: 1,
+    breakpoints: {
+      800: {
+        perView: 2
+      },
+      480: {
+        perView: 1
+      }
+    }
+})
+  
+  glide.mount()
 // reload components for each container after transition
 swup.on('contentReplaced', function () {
     document.querySelectorAll('[data-swup]').forEach(function (container) {
@@ -173,7 +190,22 @@ swup.on('contentReplaced', function () {
             item.addEventListener('click', event => {
                 document.querySelectorAll('case-small').forEach(i => {i.classList.remove('active')})
                 item.classList.add('active')
+                document.querySelectorAll('text-link').classList.remove('active')
             })
+        })
+
+        var glide = new Glide('.glide', {
+            type: 'carousel',
+            perView: 2,
+            focusAt: 1,
+            breakpoints: {
+              800: {
+                perView: 2
+              },
+              480: {
+                perView: 1
+              }
+            }
         })
     });
 });
