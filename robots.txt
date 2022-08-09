@@ -1,0 +1,12 @@
+User-agent: *
+Disallow: /work/
+Disallow: /nori.html
+Disallow: /work/nori.html
+Disallow: /work/420.html
+Disallow: /work/friendjen.html
+Disallow: /work/glasin.html
+Disallow: /work/glyfit.html
+Disallow: /work/lightstage.html
+Disallow: /work/mtn.html
+Disallow: /work/nori.html
+Disallow: /work/thredx.html
