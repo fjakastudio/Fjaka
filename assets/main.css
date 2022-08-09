@@ -1308,7 +1308,7 @@ body.about .logo path {
   background: var(--main-about-primary);
 }
 .about .wrapper {
-  background-image: url("../assets/images/lines-bg.png");
+  background-image: url("../assets/images/lines-bg.webp");
   background-position: 45% -10px;
   background-size: 2759px;
   background-repeat: no-repeat;
@@ -1318,7 +1318,7 @@ body.about .logo path {
   padding: 0 2.5rem;
 }
 .about .wrapper-inner--burgundy {
-  background: url("../assets/images/shadow-dissolve-burgundy.png") no-repeat;
+  background: url("../assets/images/shadow-dissolve-burgundy.webp") no-repeat;
   background-color: #572a40;
   background-size: auto 100%;
   color: #ecd444 !important;
@@ -1330,7 +1330,7 @@ body.about .logo path {
   color: var(--text);
 }
 .about .wrapper-inner--pink {
-  background: url("../assets/images/bg-about.png") repeat;
+  background: url("../assets/images/bg-about.webp") repeat;
   background-size: 130px;
   background-color: #fe938c;
   color: #243119 !important;
