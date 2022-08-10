@@ -33,6 +33,11 @@ body.about .logo path
         grid-gap: 2.5rem;
         color: var(--text)
 
+        @media $mobile
+            padding: 7rem 1.5rem 1rem 1.5rem;
+            grid-gap: 1.5rem
+            background-size: 100% 30%;
+
     &--pink
         background: url('../assets/images/bg-about.webp') repeat;
         background-size: 130px
@@ -45,6 +50,11 @@ body.about .logo path
         grid-gap: 2.5rem;
         color: var(--text)
 
+        @media $mobile
+            padding: 2.5rem 1.5rem 7rem 1.5rem
+            grid-gap: 1.5rem
+            margin-bottom: 1rem
+
 .red-brick
     margin-bottom: -7.556vw; // Margin minus to get burgundy section to fall behind
 
@@ -53,6 +63,11 @@ body.about .logo path
     margin: 0 auto
     padding: 0 2.5rem 5.556vw
     max-width: 65rem
+
+    @media $mobile
+        width: 100%
+        max-width: none
+        padding: 0 1.5rem 2rem
 
 .about-hand
     position: relative;
@@ -85,6 +100,10 @@ body.about .logo path
     animation-iteration-count: infinite;
     animation-duration: 4s;
 
+    @media $mobile
+        max-width: 330px
+        margin-top: 100px
+
 .col-text
     width: calc(50% - 1.25rem)
     float: left
@@ -98,3 +117,6 @@ body.about .logo path
     grid-template-columns: repeat(12, 1fr);
     grid-gap: 2.5rem;
     color: var(--text)
+
+    @media $mobile
+        grid-gap: 1.5rem

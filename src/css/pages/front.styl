@@ -1,6 +1,9 @@
 .front .wrapper-inner
     padding: 11.112vw
 
+    @media $mobile
+        padding: 5rem 1.5rem
+
 .front .wrapper
     position relative
 
@@ -10,6 +13,9 @@
     height: 3rem;
     overflow: visible;
     padding: 0 0.5rem
+
+    @media $mobile
+        display: none
 
     img
         height: 4rem;
@@ -26,6 +32,10 @@
     left: 10%;
     width: 300px;
     top: 15%;
+    
+    @media $mobile
+        left: -15%
+        top: -7%;
 
 #stars-2
     position: absolute;
@@ -33,3 +43,12 @@
     width: 300px;
     top: 15%;
     transform: rotate(180deg);
+
+    @media $mobile
+        right: -15%
+        top: -7%;
+
+#front-hand
+
+    @media $mobile
+        margin: -2.5rem 0 2.5rem 0

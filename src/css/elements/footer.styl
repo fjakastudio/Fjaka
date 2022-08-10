@@ -11,6 +11,10 @@
     position relative
     overflow: hidden
 
+    @media $mobile
+        grid-gap: 1.5rem
+        padding-bottom: 7rem
+
     &--dark
         background: linear-gradient(180deg, rgba(111,143,114,1) 68%, rgba(94,121,97,1) 68%);
 
@@ -28,17 +32,28 @@
     grid-column-end: 10;
     text-align: center;
 
+    @media $mobile
+        grid-column-start: 3;
+        grid-column-end: 11;
+
 .footer-graphic-one
     position: absolute;
     left: -40px;
     max-width: 27vw;
     bottom: 60px;
 
+    @media $mobile
+        max-width: 210px;
+
 .footer-graphic-two
     position: absolute;
     right: -60px;
     max-width: 23vw;
     bottom: 120px;
+
+    @media $mobile
+        max-width: 190px;
+        bottom: 20px
 
 .post-footer
     background: var(--background-post-footer)
@@ -48,9 +63,16 @@
     grid-gap: 2.5rem;
     padding: 4.5rem 2.5rem
 
+    @media $mobile
+        grid-gap: 1.5rem
+        padding: 2.5rem 1.5rem 0;
+
     ul
         list-style: none
         margin: 0
+        
+        @media $mobile
+            padding-left: 0
 
     li:last-child a
         margin-bottom: 0
@@ -62,3 +84,19 @@
     .col-3 p
         margin-top: 1rem
 
+        @media $mobile
+            margin-top: 0
+
+    .col-3
+        @media $mobile
+            grid-column: span 4
+
+    .col-6
+        @media $mobile
+            grid-column: span 4
+
+    .col-3-last
+        @media $mobile
+            grid-column: span 12;
+            display: flex;
+            justify-content: space-between;

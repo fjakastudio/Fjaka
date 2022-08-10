@@ -20,10 +20,16 @@ body.contact .logo path
     grid-template-columns: repeat(12, 1fr);
     grid-gap: 2.5rem;
 
+    @media $mobile
+        grid-gap: 1.5rem
+
 .contact-graphic
     position absolute
     left: 0
     top: 0
+
+    @media $mobile
+        display: none
 
 h5,
 .heading-five 

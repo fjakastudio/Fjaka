@@ -89,7 +89,7 @@ const swup = new Swup({
                           800: {
                             perView: 2
                           },
-                          480: {
+                          550: {
                             perView: 1
                           }
                         }
