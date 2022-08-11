@@ -1346,7 +1346,7 @@ body.about .logo path {
   background-color: #572a40;
   background-size: 100% 40%;
   color: #ecd444 !important;
-  padding-top: calc(7rem + 11.112vw);
+  padding-top: calc(2rem + 11.112vw);
   padding-bottom: 5.556vw;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
