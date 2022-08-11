@@ -1344,7 +1344,7 @@ body.about .logo path {
 .about .wrapper-inner--burgundy {
   background: url("../assets/images/shadow-dissolve-burgundy.webp") no-repeat;
   background-color: #572a40;
-  background-size: auto 100%;
+  background-size: 100% 40%;
   color: #ecd444 !important;
   padding-top: calc(7rem + 11.112vw);
   padding-bottom: 5.556vw;
@@ -1971,7 +1971,7 @@ body.front .logo path {
 }
 .front-info {
   position: relative;
-  min-height: 60vh;
+  min-height: 50vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2310,19 +2310,10 @@ body.work .logo path {
 }
 .case-intro {
   color: var(--text-color);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-@media (max-width: 767px) {
-  .case-intro {
-    min-height: 0;
-  }
 }
 .case-intro__text {
   padding: 2rem;
   background-color: var(--background-color);
-  flex-grow: 1;
 }
 @media (max-width: 767px) {
   .case-intro__text {
@@ -2332,28 +2323,22 @@ body.work .logo path {
 .case-intro__pic {
   display: block;
   object-fit: cover;
-  max-height: 80vh;
-}
-@media (max-width: 767px) {
-  .case-intro__pic {
-    min-height: 60vh;
-  }
+  height: 35rem;
+  width: 100%;
 }
 .case-intro__text__inner {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
-.case-intro__text__inner h2 {
-  margin-bottom: 0;
-}
 @media (max-width: 767px) {
-  .case-intro__text__inner {
+  .case-intro__text__inner h2 {
     flex-direction: column;
+    margin-bottom: 0;
   }
 }
 .case-intro__text__inner p {
-  margin-top: 1rem;
+  margin-top: 0.75rem;
 }
 .case-intro__text__inner > * {
   width: 50%;

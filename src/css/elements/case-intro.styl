@@ -1,16 +1,9 @@
 .case-intro
     color: var(--text-color);
-    min-height: 100vh
-    display: flex
-    flex-direction: column
-
-    @media $mobile
-        min-height: 0
 
 .case-intro__text
     padding: 2rem
     background-color: var(--background-color)
-    flex-grow: 1
 
     @media $mobile
         padding: 1.5rem
@@ -18,10 +11,8 @@
 .case-intro__pic
     display: block
     object-fit: cover
-    max-height: 80vh
-
-    @media $mobile
-        min-height: 60vh
+    height: 35rem;
+    width: 100%;
 
 
 .case-intro__text__inner
@@ -30,13 +21,13 @@
     justify-content: space-around
 
     h2
-        margin-bottom: 0
-
-    @media $mobile
-        flex-direction: column
+        
+        @media $mobile
+            flex-direction: column
+            margin-bottom: 0
 
     p
-        margin-top: 1rem
+        margin-top: .75rem
 
     > *
         width: 50%
