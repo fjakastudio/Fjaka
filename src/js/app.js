@@ -5,7 +5,6 @@ import SwupScrollPlugin from '@swup/scroll-plugin';
 import 'lazysizes';
 import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 import { TweenMax } from 'gsap/TweenMax';
-import Glide from '@glidejs/glide'
 import loadComponents from 'gia/loadComponents';
 import components from './components';
 import AOS from 'aos';
@@ -77,25 +76,9 @@ const swup = new Swup({
                 }
             },
             {
-                from: '/work.html',
+                from: '/work',
                 to: 'case-transition',
                 in: (next) => {
-
-                    var glide = new Glide('.glide', {
-                        type: 'carousel',
-                        perView: 2,
-                        focusAt: 1,
-                        breakpoints: {
-                          800: {
-                            perView: 2
-                          },
-                          550: {
-                            perView: 1
-                          }
-                        }
-                    })
-
-                    glide.mount()
                 },
                 out: (next) => {
                     TweenMax.to(document.querySelector('.active .case-small__inner'), .8, 
@@ -179,22 +162,6 @@ document.querySelectorAll('.case-small').forEach(item => {
     })
 })
 
-
-var glide = new Glide('.glide', {
-    type: 'carousel',
-    perView: 2,
-    focusAt: 1,
-    breakpoints: {
-      800: {
-        perView: 2
-      },
-      480: {
-        perView: 1
-      }
-    }
-})
-  
-glide.mount()
 // reload components for each container after transition
 swup.on('contentReplaced', function () {
     document.querySelectorAll('[data-swup]').forEach(function (container) {
@@ -208,20 +175,6 @@ swup.on('contentReplaced', function () {
                 item.classList.add('active')
                 document.querySelectorAll('text-link').classList.remove('active')
             })
-        })
-
-        var glide = new Glide('.glide', {
-            type: 'carousel',
-            perView: 2,
-            focusAt: 1,
-            breakpoints: {
-              800: {
-                perView: 2
-              },
-              480: {
-                perView: 1
-              }
-            }
         })
     });
 });
