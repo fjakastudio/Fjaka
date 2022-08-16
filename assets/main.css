@@ -1163,6 +1163,11 @@ p,
   margin-bottom: 0.5rem;
   display: inline-block;
 }
+@media (max-width: 767px) {
+  .footer-link {
+    font-size: clamp(1.5rem, 2.75vw, 4rem);
+  }
+}
 .footer-link::before {
   content: '';
   position: absolute;
@@ -1189,7 +1194,7 @@ p,
 }
 @media (max-width: 767px) {
   .uppercase {
-    font-size: 24px;
+    font-size: clamp(1.5rem, 4.1vw, 5rem);
     text-transform: none;
     text-align: left;
   }
@@ -1697,6 +1702,11 @@ body.thredx .logo path {
   object-fit: cover;
   object-position: bottom;
 }
+@media (max-width: 767px) {
+  .case-pic-big {
+    height: 50vh;
+  }
+}
 .case-header {
   margin: 0 0 5vw;
 }
@@ -1796,6 +1806,11 @@ body.thredx .logo path {
 }
 .col-12 {
   grid-column: span 12;
+}
+@media (max-width: 767px) {
+  .col-12 {
+    margin-bottom: 2rem;
+  }
 }
 .col figure,
 .col img {
@@ -2126,6 +2141,11 @@ body.shop .logo path {
 .shop-item img {
   margin-bottom: 1.5rem;
 }
+@media (max-width: 767px) {
+  .shop-item img {
+    margin-bottom: 1rem;
+  }
+}
 .shop-item .heading-four {
   margin: 0;
 }
@@ -2134,7 +2154,7 @@ body.shop .logo path {
 }
 @media (max-width: 767px) {
   .shop-item .shop-item__text {
-    margin: 0;
+    margin: 0.5rem 0 0 0;
   }
 }
 .shop-item .shop-item__price {
@@ -2389,7 +2409,7 @@ body.work .logo path {
 }
 @media (max-width: 767px) {
   .case-intro__text {
-    padding: 1rem;
+    padding: 1.5rem 1rem;
   }
 }
 .case-intro__pic {
@@ -2397,7 +2417,7 @@ body.work .logo path {
   object-fit: cover;
   height: 50vw;
   width: 100%;
-  object-position: 60% 40%;
+  object-position: 50% 40%;
 }
 @media (max-width: 767px) {
   .case-intro__pic {
