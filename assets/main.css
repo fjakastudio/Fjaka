@@ -1323,6 +1323,7 @@ a {
   flex-direction: column;
   text-align: center;
   justify-content: center;
+  overflow: hidden;
 }
 @media (max-width: 767px) {
   .header-big {
@@ -1338,7 +1339,12 @@ a {
   .header-big h1 {
     width: 100%;
     padding: 0;
-    margin: 0;
+    margin: 0 0 0.25rem;
+  }
+}
+@media (max-width: 767px) {
+  .header-big h2.heading-one {
+    margin-bottom: 0;
   }
 }
 .header-big__bg {
@@ -1443,8 +1449,9 @@ body.about .logo path {
 }
 @media (max-width: 767px) {
   .red-brick {
-    width: 200%;
+    height: 5rem;
     position: absolute;
+    object-fit: cover;
   }
 }
 .wrapper-about {
@@ -1928,6 +1935,16 @@ body.contact {
   color: #2cafc7;
   background-color: #131313;
 }
+@media (max-width: 767px) {
+  body.contact .col-12 {
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 767px) {
+  body.contact .col-12 p {
+    margin-bottom: 0;
+  }
+}
 body.contact .logo path {
   fill: #2cafc7;
 }
@@ -2041,6 +2058,13 @@ h5,
   max-width: 70rem;
   margin-top: 1.5rem;
 }
+@media (max-width: 767px) {
+  #swoosh {
+    left: -60px;
+    width: 50rem;
+    margin-top: 2rem;
+  }
+}
 #swoosh rect {
   fill: var(--main-yellow);
 }
@@ -2052,11 +2076,16 @@ h5,
 }
 @media (max-width: 767px) {
   .swoosh-title > span {
-    margin-right: 0.75rem;
+    margin-right: 0;
   }
 }
 .swoosh-title--active {
   display: flex;
+}
+@media (max-width: 767px) {
+  .swoosh-title--active {
+    flex-direction: column;
+  }
 }
 .swoosh-title--active span:first-child span {
   animation-delay: 0.1s !important;
@@ -2617,6 +2646,7 @@ body.work .logo path {
   .post-footer {
     grid-gap: 0;
     padding: 2.5rem 1rem 0;
+    margin-bottom: 0;
   }
 }
 .post-footer ul {
