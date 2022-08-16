@@ -1044,6 +1044,11 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 .wrapper {
   padding: 9rem 2.5rem 0 2.5rem;
 }
+@media (min-width: 2000px) {
+  .wrapper {
+    padding: 12rem 2.5rem 0 2.5rem;
+  }
+}
 @media (max-width: 767px) {
   .wrapper {
     padding: 7rem 1.5rem 1.5rem 1.5rem;
@@ -1207,6 +1212,7 @@ a {
   justify-content: space-between;
   align-items: center;
   opacity: 1;
+  transition: 0.3s ease-in;
 }
 @media (max-width: 767px) {
   .header {
@@ -1217,6 +1223,12 @@ a {
 }
 .logo {
   margin: 0;
+}
+@media (min-width: 1666px) {
+  .logo svg {
+    height: 40px;
+    width: 100%;
+  }
 }
 .logo path {
   transition: 0.3s ease-in;
@@ -1866,6 +1878,11 @@ body.contact .logo path {
   left: 0;
   top: 0;
 }
+@media (min-width: 1666px) {
+  .contact-graphic {
+    width: 25%;
+  }
+}
 @media (max-width: 767px) {
   .contact-graphic {
     display: none;
@@ -2021,6 +2038,11 @@ body.shop .logo path {
 .shop .wrapper {
   padding: 9rem 0 0 0;
 }
+@media (min-width: 2000px) {
+  .shop .wrapper {
+    padding: 12rem 0 0 0;
+  }
+}
 @media (max-width: 767px) {
   .shop .wrapper {
     padding: 7rem 0 0 0;
@@ -2099,6 +2121,11 @@ body.work {
   background-position: 100% 0;
   background-size: 500px;
 }
+@media (min-width: 2000px) {
+  .work .wrapper {
+    background-size: 730px;
+  }
+}
 @media (max-width: 767px) {
   .work .wrapper {
     background-image: none;
@@ -2115,6 +2142,11 @@ body.work .logo path {
 }
 .work .wrapper {
   padding: 9rem 0 0 0;
+}
+@media (min-width: 2000px) {
+  .work .wrapper {
+    padding: 12rem 0 0 0;
+  }
 }
 @media (max-width: 767px) {
   .work .wrapper {
@@ -2178,6 +2210,11 @@ body.work .logo path {
   transform: translateY(-2.5rem);
   background: var(--background);
   color: var(--text);
+}
+@media (min-width: 2000px) {
+  .case-small__inner:hover {
+    transform: translateY(-3.5rem);
+  }
 }
 @media (max-width: 767px) {
   .case-small__inner:hover {
@@ -2323,13 +2360,19 @@ body.work .logo path {
 .case-intro__pic {
   display: block;
   object-fit: cover;
-  height: 35rem;
+  height: 50vw;
   width: 100%;
+  object-position: 60% 40%;
 }
 .case-intro__text__inner {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+}
+@media (max-width: 767px) {
+  .case-intro__text__inner {
+    flex-direction: column;
+  }
 }
 @media (max-width: 767px) {
   .case-intro__text__inner h2 {
