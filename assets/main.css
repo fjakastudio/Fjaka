@@ -1389,9 +1389,13 @@ body.about .logo path {
   background-repeat: no-repeat;
   padding: 0;
 }
+@media (max-width: 767px) {
+  .about .wrapper {
+    overflow: hidden;
+  }
+}
 .about .wrapper-inner {
   padding: 0 2.5rem;
-  overflow: hidden;
 }
 .about .wrapper-inner--burgundy {
   background: url("../assets/images/shadow-dissolve-burgundy.webp") no-repeat;
@@ -1436,7 +1440,7 @@ body.about .logo path {
 }
 @media (max-width: 767px) {
   .red-brick {
-    width: 250%;
+    width: 200%;
     position: absolute;
   }
 }

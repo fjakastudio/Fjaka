@@ -18,9 +18,11 @@ body.about .logo path
     background-repeat: no-repeat;
     padding: 0
 
+    @media $mobile
+        overflow: hidden
+
 .about .wrapper-inner
     padding: 0 2.5rem
-    overflow: hidden
 
     &--burgundy
         background: url('../assets/images/shadow-dissolve-burgundy.webp') no-repeat;
@@ -60,7 +62,7 @@ body.about .logo path
     margin-bottom: -7.556vw; // Margin minus to get burgundy section to fall behind
 
     @media $mobile
-        width: 250%
+        width: 200%
         position: absolute
 
 .wrapper-about
