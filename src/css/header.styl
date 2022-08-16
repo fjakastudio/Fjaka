@@ -11,8 +11,8 @@
     transition: .3s ease-in
 
     @media $mobile
-        left: 1.5rem;
-        right: 1.5rem;
+        left: 1rem;
+        right: 1rem;
         top: 1.5rem;
 
 .logo
@@ -28,6 +28,10 @@
 .logo path
     transition: .3s ease-in
 
+.header nav
+
+    @media $mobile
+        display: none
 
 .header nav .active a::before
     transform-origin: 0% 50%;
