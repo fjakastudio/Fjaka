@@ -6,14 +6,17 @@
     background-color: var(--background-color)
 
     @media $mobile
-        padding: 1.5rem
+        padding: 1.5rem 1rem
 
 .case-intro__pic
     display: block
     object-fit: cover
     height: 50vw;
     width: 100%;
-    object-position: 60% 40%;
+    object-position: 50% 40%;
+
+    @media $mobile
+        height: 100vw
 
 
 .case-intro__text__inner
