@@ -50,3 +50,39 @@
 
     @media $mobile
         margin: -2.5rem 0 2.5rem 0
+
+#swoosh 
+    position: absolute
+    left: -20px
+    right: 0
+    margin: 0 auto
+    max-width: 70rem
+    margin-top: 1.5rem
+
+    rect
+        fill: var(--main-yellow);
+
+.swoosh-title
+    display: none
+
+    > span
+        margin-right: 1.25rem;
+
+        @media $mobile
+            margin-right: .75rem
+
+    &--active
+        display: flex
+
+.swoosh-title--active span:first-child span
+    animation-delay: .1s !important
+
+.swoosh-title--active span:nth-child(2) span
+    animation-delay: .4s !important
+
+.swoosh-title--active.title-1 span:first-child span
+    animation-delay: 1.2s !important
+
+.swoosh-title--active.title-1 span:nth-child(2) span
+    animation-delay: 1.4s !important
+    

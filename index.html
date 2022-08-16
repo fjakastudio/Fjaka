@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Fjaka - Digital Design Studio from Malmö</title>
-    <link href="./favicon.webp" rel="shortcut icon" type="image/x-icon">
+    <link href="/favicon.webp" rel="shortcut icon" type="image/x-icon">
     <link rel="stylesheet" href="https://use.typekit.net/prw8hpu.css">
     <link rel="stylesheet" href="./assets/normalize.css">
     <link rel="stylesheet" href="./assets/main.css">
@@ -52,7 +52,15 @@
         
         <div class="header-big">
             
-            <h1 g-component="SeparateText" class="heading-one">We’re a design studio that mixes digital and branding to create <span>amazing websites</span></h1>
+            <h1 g-component="SeparateText" g-options='{"delay": 0.1}' class="heading-one">We’re a design studio that mixes digital and branding to create</h1>
+            <h2 class="heading-one">
+                <div id="swoosh"></div>
+                <span g-component="SeparateText" class="swoosh-title title-1 swoosh-title--active">amazing websites</span>
+                <span g-component="SeparateText" class="swoosh-title title-2">colorful illustrations</span>
+                <span g-component="SeparateText" class="swoosh-title title-3">impactful products</span>
+                <span g-component="SeparateText" class="swoosh-title title-4">incredible apps</span>
+                <span g-component="SeparateText" class="swoosh-title title-5">unforgetable brands</span>
+            </h2>
             <div class="btn-wrapper">
                 <a href="/work"                 
                 class="btn btn--outline"
@@ -64,9 +72,7 @@
                 --btn-text: #2C2490;">See showreel</button>
             </div>
 
-            <div class="header-big__bg">
-
-            </div>
+            <div class="header-big__bg"></div>
         </div>
 
         <div class="front-info">
