@@ -4,6 +4,7 @@ import SwupBodyClassPlugin from '@swup/body-class-plugin';
 import SwupScrollPlugin from '@swup/scroll-plugin';
 import 'lazysizes';
 import 'lazysizes/plugins/parent-fit/ls.parent-fit';
+import SwupProgressPlugin from '@swup/progress-plugin';
 import { TweenMax } from 'gsap/TweenMax';
 import loadComponents from 'gia/loadComponents';
 import components from './components';
@@ -89,7 +90,16 @@ const swup = new Swup({
             },
         ]),
         new SwupBodyClassPlugin(),
-        new SwupScrollPlugin()
+        new SwupScrollPlugin(),
+        new SwupProgressPlugin(
+            {
+                className: 'loader',
+                transition: 300,
+                delay: 600,
+                initialValue: 0.25,
+                hideImmediately: true
+              }
+        )
     ]
 });
 
