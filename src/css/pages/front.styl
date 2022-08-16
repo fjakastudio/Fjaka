@@ -59,6 +59,11 @@
     max-width: 70rem
     margin-top: 1.5rem
 
+    @media $mobile
+        left: -60px
+        width: 50rem
+        margin-top: 2rem
+
     rect
         fill: var(--main-yellow);
 
@@ -69,10 +74,13 @@
         margin-right: 1.25rem;
 
         @media $mobile
-            margin-right: .75rem
+            margin-right: 0
 
     &--active
         display: flex
+        
+        @media $mobile
+            flex-direction: column
 
 .swoosh-title--active span:first-child span
     animation-delay: .1s !important
