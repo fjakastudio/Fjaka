@@ -11,14 +11,18 @@
 .case-intro__pic
     display: block
     object-fit: cover
-    height: 35rem;
+    height: 50vw;
     width: 100%;
+    object-position: 60% 40%;
 
 
 .case-intro__text__inner
     display: flex
     flex-direction: row
     justify-content: space-around
+
+    @media $mobile
+        flex-direction: column
 
     h2
         
