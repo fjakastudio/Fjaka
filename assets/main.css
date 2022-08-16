@@ -1450,7 +1450,7 @@ body.about .logo path {
   .wrapper-about {
     width: 100%;
     max-width: none;
-    padding: 0 1rem 2rem;
+    padding: 0 1rem 1rem;
   }
 }
 .about-hand {
