@@ -20,6 +20,7 @@ body.about .logo path
 
 .about .wrapper-inner
     padding: 0 2.5rem
+    overflow: hidden
 
     &--burgundy
         background: url('../assets/images/shadow-dissolve-burgundy.webp') no-repeat;
@@ -34,7 +35,7 @@ body.about .logo path
         color: var(--text)
 
         @media $mobile
-            padding: 7rem 1rem 1rem 1rem;
+            padding: 9rem 1rem 1rem 1rem;
             grid-gap: 1rem
             background-size: 100% 30%;
 
@@ -51,12 +52,16 @@ body.about .logo path
         color: var(--text)
 
         @media $mobile
-            padding: 2.5rem 1rem 7rem 1rem
+            padding: 2.5rem 1rem 5rem 1rem
             grid-gap: 1rem
             margin-bottom: 1rem
 
 .red-brick
     margin-bottom: -7.556vw; // Margin minus to get burgundy section to fall behind
+
+    @media $mobile
+        width: 250%
+        position: absolute
 
 .wrapper-about
     width: 55vw
@@ -67,12 +72,15 @@ body.about .logo path
     @media $mobile
         width: 100%
         max-width: none
-        padding: 0 1rem 2rem
+        padding: 0 1rem 1rem
 
 .about-hand
     position: relative;
     height: 41rem;
     margin-bottom: 2rem
+
+    @media $mobile
+        margin-bottom: 0
 
 .hand-ball-graphic
     position: absolute;
@@ -80,6 +88,10 @@ body.about .logo path
     left: -130px;
     right: 0;
     margin: 0 auto;
+
+    @media $mobile
+        bottom: 50px
+        left: -60px
 
 @keyframes upNdown {
     0% {transform: translateY(0px);}
@@ -101,8 +113,9 @@ body.about .logo path
     animation-duration: 4s;
 
     @media $mobile
-        max-width: 330px
-        margin-top: 100px
+        max-width: 330px;
+        margin-top: 100px;
+        left: 0;
 
 .col-text
     width: calc(50% - 1.25rem)

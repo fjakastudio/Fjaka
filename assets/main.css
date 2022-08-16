@@ -1082,6 +1082,11 @@ h5 {
   line-height: 1.07;
   margin: 0 0 2rem;
 }
+@media (max-width: 767px) {
+  .big-header-one {
+    margin-bottom: 1rem;
+  }
+}
 h1,
 .heading-one {
   font-size: clamp(2.5rem, 4.6vw, 7.625rem);
@@ -1089,12 +1094,24 @@ h1,
   margin: 0 0 2rem;
   letter-spacing: 0.5px;
 }
+@media (max-width: 767px) {
+  h1,
+  .heading-one {
+    margin-bottom: 1rem;
+  }
+}
 h2,
 .heading-two {
   font-size: clamp(2rem, 4.1vw, 5rem);
   margin: 0 0 1.5rem;
   line-height: 1.1;
   letter-spacing: 0.5px;
+}
+@media (max-width: 767px) {
+  h2,
+  .heading-two {
+    margin-bottom: 1rem;
+  }
 }
 h3,
 .heading-three {
@@ -1374,6 +1391,7 @@ body.about .logo path {
 }
 .about .wrapper-inner {
   padding: 0 2.5rem;
+  overflow: hidden;
 }
 .about .wrapper-inner--burgundy {
   background: url("../assets/images/shadow-dissolve-burgundy.webp") no-repeat;
@@ -1389,7 +1407,7 @@ body.about .logo path {
 }
 @media (max-width: 767px) {
   .about .wrapper-inner--burgundy {
-    padding: 7rem 1rem 1rem 1rem;
+    padding: 9rem 1rem 1rem 1rem;
     grid-gap: 1rem;
     background-size: 100% 30%;
   }
@@ -1408,13 +1426,19 @@ body.about .logo path {
 }
 @media (max-width: 767px) {
   .about .wrapper-inner--pink {
-    padding: 2.5rem 1rem 7rem 1rem;
+    padding: 2.5rem 1rem 5rem 1rem;
     grid-gap: 1rem;
     margin-bottom: 1rem;
   }
 }
 .red-brick {
   margin-bottom: -7.556vw;
+}
+@media (max-width: 767px) {
+  .red-brick {
+    width: 250%;
+    position: absolute;
+  }
 }
 .wrapper-about {
   width: 55vw;
@@ -1426,7 +1450,7 @@ body.about .logo path {
   .wrapper-about {
     width: 100%;
     max-width: none;
-    padding: 0 1rem 2rem;
+    padding: 0 1rem 1rem;
   }
 }
 .about-hand {
@@ -1434,12 +1458,23 @@ body.about .logo path {
   height: 41rem;
   margin-bottom: 2rem;
 }
+@media (max-width: 767px) {
+  .about-hand {
+    margin-bottom: 0;
+  }
+}
 .hand-ball-graphic {
   position: absolute;
   bottom: 0;
   left: -130px;
   right: 0;
   margin: 0 auto;
+}
+@media (max-width: 767px) {
+  .hand-ball-graphic {
+    bottom: 50px;
+    left: -60px;
+  }
 }
 #hand {
   position: absolute;
@@ -1458,6 +1493,7 @@ body.about .logo path {
   #hand {
     max-width: 330px;
     margin-top: 100px;
+    left: 0;
   }
 }
 .col-text {
@@ -1655,8 +1691,8 @@ body.thredx .logo path {
 }
 @media (max-width: 767px) {
   .case .wrapper-inner {
-    padding: 1.5rem;
-    grid-gap: 1.5rem;
+    padding: 1rem;
+    grid-gap: 1rem;
   }
 }
 .case .wrapper-inner--dark {
@@ -2468,9 +2504,9 @@ body.work .logo path {
 @media (max-width: 767px) {
   .big-footer {
     grid-gap: 1.5rem;
-    padding-bottom: 2rem;
+    padding-bottom: 3rem;
     border-radius: 1rem 1rem 0 0;
-    padding-top: 2rem;
+    padding-top: 3rem;
   }
 }
 .big-footer--dark {
