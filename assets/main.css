@@ -1411,7 +1411,7 @@ body.about .logo path {
 }
 @media (max-width: 767px) {
   .about .wrapper-inner--burgundy {
-    padding: 9rem 1rem 1rem 1rem;
+    padding: 8rem 1rem 1rem 1rem;
     grid-gap: 1rem;
     background-size: 100% 30%;
   }
@@ -2254,11 +2254,16 @@ body.work .logo path {
 }
 @media (max-width: 767px) {
   .work .wrapper-inner {
-    padding: 0 2rem 1rem;
+    padding: 0 1rem 1rem;
   }
 }
 .case-wrapper {
   margin-top: 11vw;
+}
+@media (max-width: 767px) {
+  .case-wrapper {
+    margin-top: 5rem;
+  }
 }
 .animate__animated.case-small {
   animation-duration: 0.6s;
