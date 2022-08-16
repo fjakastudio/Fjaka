@@ -60,6 +60,52 @@ const swup = new Swup({
                         speed: 0.5,
                         path: '../assets/lottie/shining-process.json'
                     })
+
+                    var animationSwoosh = bodymovin.loadAnimation({
+                        container: document.getElementById('swoosh'),
+                        renderer: 'svg',
+                        loop: false,
+                        autoplay: false,
+                        speed: 0.1,
+                        path: '../assets/lottie/splash.json'
+                    })
+                    
+                    // Get a reference to the splash dialog
+                    animationSwoosh.goToAndStop(58, true);
+                    var splash = document.querySelector(".title-1");
+                    var splashTwo = document.querySelector(".title-2");
+                    var splashThree = document.querySelector(".title-3");
+                    var splashFour = document.querySelector(".title-4");
+                    var splashFive = document.querySelector(".title-5");
+                    
+                    // .5 seconds later, hide the splash
+                    setTimeout(function(){
+                        splash.classList.remove("swoosh-title--active");
+                        splashTwo.classList.add("swoosh-title--active");
+                        animationSwoosh.playSegments([0, 58], true);
+                        
+                    }, 5000);
+                    
+                    setTimeout(function(){
+                        splashTwo.classList.remove("swoosh-title--active");
+                        splashThree.classList.add("swoosh-title--active");
+                        animationSwoosh.playSegments([0, 58], true);
+                        
+                    }, 9000);
+                    
+                    setTimeout(function(){
+                        splashThree.classList.remove("swoosh-title--active");
+                        splashFour.classList.add("swoosh-title--active");
+                        animationSwoosh.playSegments([0, 58], true);
+                        
+                    }, 14000);
+                    
+                    setTimeout(function(){
+                        splashFour.classList.remove("swoosh-title--active");
+                        splashFive.classList.add("swoosh-title--active");
+                        animationSwoosh.playSegments([0, 58], true);
+                        
+                    }, 18000);
                 },
                 out: (next) => {
                     document.querySelector('#swup').style.opacity = 1;
@@ -140,6 +186,52 @@ var animation = bodymovin.loadAnimation({
     speed: 0.1,
     path: '../assets/lottie/shining-process.json'
 })
+
+var animationSwoosh = bodymovin.loadAnimation({
+    container: document.getElementById('swoosh'),
+    renderer: 'svg',
+    loop: false,
+    autoplay: false,
+    speed: 0.1,
+    path: '../assets/lottie/splash.json'
+})
+
+// Get a reference to the splash dialog
+animationSwoosh.goToAndStop(58, true);
+var splash = document.querySelector(".title-1");
+var splashTwo = document.querySelector(".title-2");
+var splashThree = document.querySelector(".title-3");
+var splashFour = document.querySelector(".title-4");
+var splashFive = document.querySelector(".title-5");
+
+// .5 seconds later, hide the splash
+setTimeout(function(){
+    splash.classList.remove("swoosh-title--active");
+    splashTwo.classList.add("swoosh-title--active");
+    animationSwoosh.playSegments([0, 58], true);
+    
+}, 5000);
+
+setTimeout(function(){
+    splashTwo.classList.remove("swoosh-title--active");
+    splashThree.classList.add("swoosh-title--active");
+    animationSwoosh.playSegments([0, 58], true);
+    
+}, 9000);
+
+setTimeout(function(){
+    splashThree.classList.remove("swoosh-title--active");
+    splashFour.classList.add("swoosh-title--active");
+    animationSwoosh.playSegments([0, 58], true);
+    
+}, 14000);
+
+setTimeout(function(){
+    splashFour.classList.remove("swoosh-title--active");
+    splashFive.classList.add("swoosh-title--active");
+    animationSwoosh.playSegments([0, 58], true);
+    
+}, 18000);
 
 AOS.init();
 
