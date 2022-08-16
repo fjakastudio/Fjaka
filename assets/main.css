@@ -1697,6 +1697,7 @@ body.thredx .logo path {
   .case .wrapper-inner {
     padding: 1rem;
     grid-gap: 1rem;
+    overflow: hidden;
   }
 }
 .case .wrapper-inner--dark {
@@ -1752,7 +1753,7 @@ body.thredx .logo path {
 }
 @media (max-width: 767px) {
   .case-header {
-    margin-bottom: 0;
+    margin-bottom: 1rem;
   }
 }
 .case-pic {
@@ -2750,6 +2751,91 @@ body.work .logo path {
 }
 .glide__bullet--active {
   background: rgba(255,255,255,0.8);
+}
+.loader {
+  height: 6px;
+  background-color: #00f;
+  animation: glow linear 4s infinite;
+}
+@-moz-keyframes glow {
+  0% {
+    background-color: #fbf778;
+  }
+  20% {
+    background-color: #171259;
+  }
+  40% {
+    background-color: #ff6237;
+  }
+  60% {
+    background-color: #e43e2c;
+  }
+  80% {
+    background-color: #cdd7cf;
+  }
+  100% {
+    background-color: #ff6237;
+  }
+}
+@-webkit-keyframes glow {
+  0% {
+    background-color: #fbf778;
+  }
+  20% {
+    background-color: #171259;
+  }
+  40% {
+    background-color: #ff6237;
+  }
+  60% {
+    background-color: #e43e2c;
+  }
+  80% {
+    background-color: #cdd7cf;
+  }
+  100% {
+    background-color: #ff6237;
+  }
+}
+@-o-keyframes glow {
+  0% {
+    background-color: #fbf778;
+  }
+  20% {
+    background-color: #171259;
+  }
+  40% {
+    background-color: #ff6237;
+  }
+  60% {
+    background-color: #e43e2c;
+  }
+  80% {
+    background-color: #cdd7cf;
+  }
+  100% {
+    background-color: #ff6237;
+  }
+}
+@keyframes glow {
+  0% {
+    background-color: #fbf778;
+  }
+  20% {
+    background-color: #171259;
+  }
+  40% {
+    background-color: #ff6237;
+  }
+  60% {
+    background-color: #e43e2c;
+  }
+  80% {
+    background-color: #cdd7cf;
+  }
+  100% {
+    background-color: #ff6237;
+  }
 }
 @-moz-keyframes slideUp {
   0% {
