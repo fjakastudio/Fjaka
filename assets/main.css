@@ -2908,14 +2908,6 @@ body.work .logo path {
     background-color: #ff6237;
   }
 }
-@media (max-width: 767px) {
-  [data-aos] {
-    visibility: visible;
-  }
-  [data-aos].animated {
-    visibility: visible;
-  }
-}
 @-moz-keyframes slideUp {
   0% {
     transform: translate3d(0, 100%, 0);
