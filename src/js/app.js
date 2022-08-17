@@ -235,16 +235,81 @@ setTimeout(function(){
 
 AOS.init();
 
-var prevScrollpos = window.pageYOffset;
-document.getElementById("header").style.transition = ".3s";
-window.onscroll = function() {
-  var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    document.getElementById("header").style.opacity = "1";
-  } else {
-    document.getElementById("header").style.opacity = "0";
-  }
-  prevScrollpos = currentScrollPos;
+(function(){
+
+var doc = document.documentElement;
+var w = window;
+
+var prevScroll = w.scrollY || doc.scrollTop;
+var curScroll;
+var direction = 0;
+var prevDirection = 0;
+
+var header = document.getElementById('header');
+
+var checkScroll = function() {
+
+    /*
+    ** Find the direction of scroll
+    ** 0 - initial, 1 - up, 2 - down
+    */
+
+    curScroll = w.scrollY || doc.scrollTop;
+    if (curScroll > prevScroll) { 
+    //scrolled up
+    direction = 2;
+    }
+    else if (curScroll < prevScroll) { 
+    //scrolled down
+    direction = 1;
+    }
+
+    if (direction !== prevDirection) {
+    toggleHeader(direction, curScroll);
+    }
+    
+    prevScroll = curScroll;
+};
+
+var toggleHeader = function(direction, curScroll) {
+    if (direction === 2 && curScroll > 80) { 
+    
+    //replace 52 with the height of your header in px
+
+    header.classList.add('hide');
+    prevDirection = direction;
+    }
+    else if (direction === 1) {
+    header.classList.remove('hide');
+    prevDirection = direction;
+    }
+};
+
+window.addEventListener('scroll', checkScroll);
+
+})();
+
+function hasTouch() {
+return 'ontouchstart' in document.documentElement
+        || navigator.maxTouchPoints > 0
+        || navigator.msMaxTouchPoints > 0;
+}
+
+if (hasTouch()) { // remove all the :hover stylesheets
+try { // prevent exception on browsers not supporting DOM styleSheets properly
+    for (var si in document.styleSheets) {
+    var styleSheet = document.styleSheets[si];
+    if (!styleSheet.rules) continue;
+
+    for (var ri = styleSheet.rules.length - 1; ri >= 0; ri--) {
+        if (!styleSheet.rules[ri].selectorText) continue;
+
+        if (styleSheet.rules[ri].selectorText.match(':hover')) {
+        styleSheet.deleteRule(ri);
+        }
+    }
+    }
+} catch (ex) {}
 }
 
 document.querySelectorAll('li').forEach(item => {
