@@ -1245,6 +1245,9 @@ a {
   opacity: 1;
   transition: 0.3s ease-in;
 }
+.header.hide {
+  opacity: 0;
+}
 @media (max-width: 767px) {
   .header {
     left: 1rem;
@@ -1864,10 +1867,6 @@ body.thredx .logo path {
     margin-bottom: 2rem;
   }
 }
-.col figure,
-.col img {
-  height: 100%;
-}
 .push-3-11 {
   grid-column-start: 3;
   grid-column-end: 11;
@@ -2047,7 +2046,7 @@ h5,
 }
 @media (max-width: 767px) {
   #front-hand {
-    margin: -2.5rem 0 2.5rem 0;
+    display: none;
   }
 }
 #swoosh {
@@ -2492,7 +2491,7 @@ body.work .logo path {
   .btn-wrapper {
     flex-direction: column;
     width: 100%;
-    padding: 1rem;
+    padding: 1rem 1rem 0 1rem;
   }
 }
 .btn-wrapper > .btn {
@@ -2502,6 +2501,9 @@ body.work .logo path {
   .btn-wrapper > .btn {
     margin-bottom: 1rem;
     margin-right: 0;
+  }
+  .btn-wrapper > .btn:last-child {
+    margin-bottom: 0;
   }
 }
 .btn-category {
@@ -2690,138 +2692,6 @@ body.work .logo path {
     display: flex;
     justify-content: space-between;
   }
-}
-.glide {
-  position: relative;
-  width: 100%;
-  box-sizing: border-box;
-}
-.glide * {
-  box-sizing: inherit;
-}
-.glide__track {
-  overflow: hidden;
-}
-.glide__slides {
-  position: relative;
-  width: 100%;
-  list-style: none;
-  backface-visibility: hidden;
-  transform-style: preserve-3d;
-  touch-action: pan-Y;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-  white-space: nowrap;
-  display: flex;
-  flex-wrap: nowrap;
-  will-change: transform;
-}
-.glide__slides--dragging {
-  user-select: none;
-}
-.glide__slide {
-  width: 100%;
-  height: 100%;
-  flex-shrink: 0;
-  white-space: normal;
-  user-select: none;
-  -webkit-touch-callout: none;
-  -webkit-tap-highlight-color: transparent;
-}
-.glide__slide a {
-  user-select: none;
-  -webkit-user-drag: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-}
-.glide__arrows {
-  -webkit-touch-callout: none;
-  user-select: none;
-}
-.glide__bullets {
-  -webkit-touch-callout: none;
-  user-select: none;
-}
-.glide--rtl {
-  direction: rtl;
-}
-.glide {
-  position: relative;
-  width: 100%;
-  box-sizing: border-box;
-}
-.glide * {
-  box-sizing: inherit;
-}
-.glide__track {
-  overflow: hidden;
-}
-.glide__slides {
-  position: relative;
-  width: 100%;
-  list-style: none;
-  backface-visibility: hidden;
-  transform-style: preserve-3d;
-  touch-action: pan-Y;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-  white-space: nowrap;
-  display: flex;
-  flex-wrap: nowrap;
-  will-change: transform;
-}
-.glide__slides--dragging {
-  user-select: none;
-}
-.glide__slide {
-  width: 100%;
-  height: 100%;
-  flex-shrink: 0;
-  white-space: normal;
-  user-select: none;
-  -webkit-touch-callout: none;
-  -webkit-tap-highlight-color: transparent;
-}
-.glide__slide a {
-  user-select: none;
-  -webkit-user-drag: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-}
-.glide__arrows {
-  -webkit-touch-callout: none;
-  user-select: none;
-}
-.glide__bullets {
-  -webkit-touch-callout: none;
-  user-select: none;
-}
-.glide--rtl {
-  direction: rtl;
-}
-.glide {
-  padding-left: 1rem;
-}
-.glide__bullets {
-  text-align: center;
-}
-.glide__bullet {
-  border-radius: 100%;
-  height: 0.5rem;
-  width: 0.5rem;
-  margin-right: 0.5rem;
-  padding: 0;
-  outline: 0;
-  background: rgba(255,255,255,0.3);
-  border: 0;
-}
-.glide__bullet:last-child {
-  margin-right: 0;
-}
-.glide__bullet--active {
-  background: rgba(255,255,255,0.8);
 }
 .loader {
   height: 6px;
