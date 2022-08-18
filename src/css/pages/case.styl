@@ -11,6 +11,9 @@ body.nori .logo path
 .nori .header nav a::before 
     background: #4050F7   
 
+.nori .menu-icon span {
+    background-color: #4050F7 
+}
 
 body.hom 
     background-color: #EBEAE7
@@ -25,6 +28,9 @@ body.hom .logo path
 .hom .header nav a::before 
     background: #DC5842   
 
+.hom .menu-icon span {
+    background-color: #DC5842
+}
 
 body.ls 
     background-color: #000000
@@ -39,6 +45,10 @@ body.ls .logo path
 .ls .header nav a::before 
     background: #DFE1EB 
 
+.ls .menu-icon span {
+    background-color: #DFE1EB
+}
+
 body.mtn 
     background-color: #CECFD0
     transition: 0s;
@@ -52,6 +62,9 @@ body.mtn .logo path
 .mtn .header nav a::before 
     background: #161616   
 
+.mtn .menu-icon span {
+    background-color: #161616
+}
 
 body.glasin 
     background-color: #EDF0F3
@@ -66,6 +79,10 @@ body.glasin .logo path
 .glasin .header nav a::before 
     background: #1D1E1B   
 
+.glasin .menu-icon span {
+    background-color: #1D1E1B
+}
+
 body.glyfit 
     background-color: #EFEEE8
     transition: 0s;
@@ -78,6 +95,10 @@ body.glyfit .logo path
 
 .glyfit .header nav a::before 
     background: #1E1E1E   
+
+.glyfit .menu-icon span {
+    background-color: #1E1E1E
+}
 
 body.friend-420 
     background-color: #E6DFC8
@@ -92,6 +113,10 @@ body.friend-420 .logo path
 .friend-420 .header nav a::before 
     background: #405C41
 
+.friend-420 .menu-icon span {
+    background-color: #405C41
+}
+
 body.friend-jen 
     background-color: #FFF7F0
     transition: 0s;
@@ -104,6 +129,10 @@ body.friend-jen .logo path
 
 .friend-jen .header nav a::before 
     background: #1D7260
+
+.friend-jen .menu-icon span {
+    background-color: #1D7260
+}
 
 body.thredx 
     background-color: #E8E8DF
@@ -124,6 +153,9 @@ body.thredx .logo path
 .thredx .header nav a::before 
     background: #fff   
 
+.thredx .menu-icon span {
+    background-color: #fff
+}
 
 .case .wrapper-inner
     padding: 0 2.5rem;
@@ -199,7 +231,14 @@ body.thredx .logo path
 
 // Grid settings
 .col
-    margin-bottom: 5.556vw
+    margin-bottom: 2.556vw
+
+    @media $desktop-l
+        margin-bottom: 2vw
+
+    @media $desktop-xl
+        margin-bottom: .5vw
+
 
     @media $mobile
         margin-bottom: 0

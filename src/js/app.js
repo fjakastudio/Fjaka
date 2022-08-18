@@ -136,7 +136,13 @@ const swup = new Swup({
             },
         ]),
         new SwupBodyClassPlugin(),
-        new SwupScrollPlugin(),
+        new SwupScrollPlugin({
+            doScrollingRightAway: false,
+            animateScroll: false,
+            scrollFriction: 0,
+            scrollAcceleration: 0,
+            offset: 0,
+        }),
         new SwupProgressPlugin(
             {
                 className: 'loader',
@@ -312,6 +318,11 @@ try { // prevent exception on browsers not supporting DOM styleSheets properly
 } catch (ex) {}
 }
 
+document.querySelector('.menu-icon').onclick = function() {
+    document.querySelector('body').classList.toggle('active-menu');
+    document.querySelector('.header').classList.toggle('active-menu');
+}
+
 document.querySelectorAll('li').forEach(item => {
     item.addEventListener('click', event => {
         document.querySelectorAll('li').forEach(i => {i.classList.remove('active')})
@@ -335,6 +346,11 @@ swup.on('contentReplaced', function () {
         loadComponents(components, container);
         
         AOS.init();
+
+        document.querySelector('.menu-icon').onclick = function() {
+            document.querySelector('body').classList.toggle('active-menu');
+            document.querySelector('.header').classList.toggle('active-menu');
+        }        
 
         document.querySelectorAll('.case-small').forEach(item => {
             item.addEventListener('click', event => {
