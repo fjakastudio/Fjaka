@@ -20,6 +20,8 @@
 
 .logo
     margin: 0
+    z-index: 2;
+    position: relative;
 
 
 .logo svg
@@ -31,11 +33,6 @@
 .logo path
     transition: .3s ease-in
 
-.header nav
-
-    @media $mobile
-        display: none
-
 .header nav .active a::before
     transform-origin: 0% 50%;
     transform: scale3d(1, 1, 1);
@@ -45,6 +42,14 @@
     text-decoration: none
     font-weight: 500
     position relative
+
+    @media $mobile
+        font-family: p22-mackinac-pro, serif;
+        font-weight: 800
+        font-size: 3rem
+        margin-bottom: 1rem;
+        display: block;
+        color: currentColor !important
 
     &::before 
         content:''
@@ -57,6 +62,11 @@
         transform-origin: 100% 50%;
         transform: scale3d(0, 1, 1);
         transition: transform 0.3s;
+
+        @media $mobile
+            height: 3px
+            background: var(--main-yellow) !important
+
 
     &:hover::before 
         transform-origin: 0% 50%;
