@@ -36,7 +36,7 @@ body.active-menu
     .header li
         text-align: center
 
-.menu-icon {
+.menu-icon
     width: 2rem;
     height: 1.5rem;
     position: absolute;
@@ -45,7 +45,10 @@ body.active-menu
     background: none
     border: none
     z-index: 2
-}
+    display: none
+
+    @media $mobile
+        display: block
 
 .menu-icon span {
     width: 100%;

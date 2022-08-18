@@ -1807,6 +1807,13 @@ body.thredx .logo path {
 .case-header {
   margin: 0 0 5vw;
 }
+.case-header video {
+  height: 70vh;
+  min-height: 25rem;
+  max-height: 40rem;
+  width: 100%;
+  object-fit: cover;
+}
 @media (max-width: 767px) {
   .case-header {
     margin-bottom: 1rem;
@@ -2892,6 +2899,12 @@ body.active-menu {
   background: none;
   border: none;
   z-index: 2;
+  display: none;
+}
+@media (max-width: 767px) {
+  .menu-icon {
+    display: block;
+  }
 }
 .menu-icon span {
   width: 100%;
