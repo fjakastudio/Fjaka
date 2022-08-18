@@ -2850,6 +2850,9 @@ body.work .logo path {
   opacity: 1;
   visibility: visible;
 }
+body.active-menu {
+  background: #0e0b36 !important;
+}
 @media (max-width: 767px) {
   .header.active-menu {
     mix-blend-mode: normal !important;
