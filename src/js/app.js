@@ -69,6 +69,20 @@ const swup = new Swup({
                         speed: 0.1,
                         path: '../assets/lottie/splash.json'
                     })
+
+                    document.querySelector('.header-big__bg').onclick = function() {
+                        document.querySelector('body').classList.remove('active-reel');
+                        var player = document.getElementById("reel");
+                        var data = { method: "pause" };
+                        player.contentWindow.postMessage(JSON.stringify(data), "*");
+                    }
+                    
+                    document.querySelector('.play-reel').onclick = function() {
+                        document.querySelector('body').classList.add('active-reel');
+                        var player = document.getElementById("reel");
+                        var data = { method: "play" };
+                        player.contentWindow.postMessage(JSON.stringify(data), "*");
+                    }
                     
                     // Get a reference to the splash dialog
                     animationSwoosh.goToAndStop(58, true);
@@ -323,6 +337,20 @@ document.querySelector('.menu-icon').onclick = function() {
     document.querySelector('.header').classList.toggle('active-menu');
 }
 
+document.querySelector('.header-big__bg').onclick = function() {
+    document.querySelector('body').classList.remove('active-reel');
+    var player = document.getElementById("reel");
+    var data = { method: "pause" };
+    player.contentWindow.postMessage(JSON.stringify(data), "*");
+}
+
+document.querySelector('.play-reel').onclick = function() {
+    document.querySelector('body').classList.add('active-reel');
+    var player = document.getElementById("reel");
+    var data = { method: "play" };
+    player.contentWindow.postMessage(JSON.stringify(data), "*");
+}
+
 document.querySelectorAll('li').forEach(item => {
     item.addEventListener('click', event => {
         document.querySelectorAll('li').forEach(i => {i.classList.remove('active')})
@@ -351,6 +379,10 @@ swup.on('contentReplaced', function () {
             document.querySelector('body').classList.toggle('active-menu');
             document.querySelector('.header').classList.toggle('active-menu');
         }        
+
+        var player = document.getElementById("reel");
+        var data = { method: "pause" };
+        player.contentWindow.postMessage(JSON.stringify(data), "*");
 
         document.querySelectorAll('.case-small').forEach(item => {
             item.addEventListener('click', event => {
