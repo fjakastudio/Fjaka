@@ -79,6 +79,9 @@ video
 .active-reel
     overflow: hidden;
 
+    @media $mobile
+        overflow: visible
+
     .header-big h1,
     .header-big h2,
     .btn-wrapper,
@@ -86,7 +89,15 @@ video
     .header nav
         opacity: 0
         visibility: hidden
+
+        @media $mobile
+            opacity: 1
+            visibility: visible
     
     iframe
         opacity: 1
         visibility: visible
+
+        @media $mobile
+            opacity: 0
+            visibility: hidden
