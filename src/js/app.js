@@ -70,6 +70,11 @@ const swup = new Swup({
                         path: '../assets/lottie/splash.json'
                     })
 
+                    document.querySelector('.menu-icon').onclick = function() {
+                        document.querySelector('body').classList.toggle('active-menu');
+                        document.querySelector('.header').classList.toggle('active-menu');
+                    }                    
+
                     document.querySelector('.header-big__bg').onclick = function() {
                         document.querySelector('body').classList.remove('active-reel');
                         var player = document.getElementById("reel");
@@ -120,6 +125,7 @@ const swup = new Swup({
                         animationSwoosh.playSegments([0, 58], true);
                         
                     }, 18000);
+
                 },
                 out: (next) => {
                     document.querySelector('#swup').style.opacity = 1;
@@ -373,12 +379,7 @@ swup.on('contentReplaced', function () {
     document.querySelectorAll('[data-swup]').forEach(function (container) {
         loadComponents(components, container);
         
-        AOS.init();
-
-        document.querySelector('.menu-icon').onclick = function() {
-            document.querySelector('body').classList.toggle('active-menu');
-            document.querySelector('.header').classList.toggle('active-menu');
-        }        
+        AOS.init(); 
 
         var player = document.getElementById("reel");
         var data = { method: "pause" };
