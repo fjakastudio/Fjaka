@@ -72,12 +72,19 @@
                 style="--btn-color: #FBF778;
                 --btn-text: #2C2490;" title="work">Explore works</a>
                 <button                 
-                class="btn btn--outline"
+                class="btn btn--outline play-reel"
                 style="--btn-color: #FBF778;
-                --btn-text: #2C2490;">See showreel</button>
+                --btn-text: #2C2490;" onclick="play_video()">See showreel</button>
             </div>
 
-            <div class="header-big__bg"></div>
+            <div class="header-big__bg">
+                <video class="show-reel" preload="none" loop muted playsinline autoplay="autoplay" style="pointer-events: none;">
+                    <source src="../assets/images/bg-web.webm" type="video/webm" />
+                    <source src="../assets/images/bg-web.mp4" type="video/mp4" />
+                </video>
+
+                <iframe id="reel" class="pause-reel" src="https://player.vimeo.com/video/741137704?h=f436b35e8c&amp;title=0&amp;byline=0&amp;portrait=0&amp;speed=0&amp;loop=1&amp;player_id=0&amp;app_id=58479" width="1920" height="1080" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Showreel Fjaka"></iframe>
+            </div>
         </div>
 
         <div class="front-info">

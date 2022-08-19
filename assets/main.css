@@ -1373,16 +1373,59 @@ a {
   background: #08052d;
   overflow: hidden;
 }
+.header-big__bg video {
+  pointer-events: none;
+  opacity: 0.1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .header-big__bg iframe {
   height: 110%;
   width: 110%;
   position: absolute;
-  top: 0;
+  top: 0%;
   left: -5%;
   right: 0;
   bottom: 0;
-  opacity: 0.3;
-  z-index: -5;
+  pointer-events: none;
+}
+@media screen and (max-width: 1350px) {
+  .header-big__bg iframe {
+    height: 110%;
+    width: 140%;
+    left: -25%;
+  }
+}
+.active-reel .header-big__bg {
+  cursor: url("/assets/images/cursor.png"), auto;
+}
+iframe {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.6s;
+}
+.header-big h1,
+.header-big h2,
+.btn-wrapper .btn,
+video {
+  transition: opacity 0.6s;
+  opacity: 1;
+}
+.active-reel {
+  overflow: hidden;
+}
+.active-reel .header-big h1,
+.active-reel .header-big h2,
+.active-reel .btn-wrapper,
+.active-reel video,
+.active-reel .header nav {
+  opacity: 0;
+  visibility: hidden;
+}
+.active-reel iframe {
+  opacity: 1;
+  visibility: visible;
 }
 .swup-progress-bar {
   height: 4px;
@@ -2542,6 +2585,12 @@ body.work .logo path {
   display: inline-block;
   background: transparent;
   font-size: clamp(1rem, 1.4vw, 1.5rem);
+  cursor: pointer;
+}
+@media (max-width: 767px) {
+  .btn.play-reel {
+    display: none;
+  }
 }
 @media (max-width: 767px) {
   .btn {
@@ -2606,7 +2655,7 @@ body.work .logo path {
 .case-intro__pic {
   display: block;
   object-fit: cover;
-  height: 50vw;
+  height: 40vw;
   width: 100%;
   object-position: 50% 40%;
 }
