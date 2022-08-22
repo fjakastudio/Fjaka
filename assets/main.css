@@ -1458,6 +1458,25 @@ video {
 .work .swup-progress-bar {
   background-color: #ff6237;
 }
+.wrapper-error {
+  margin-bottom: 10rem;
+  margin-top: 5rem;
+  padding: 0 2.5rem;
+}
+@media (max-width: 767px) {
+  .wrapper-error {
+    margin-bottom: 5rem;
+    padding: 0 1rem;
+  }
+}
+.wrapper-error img {
+  margin-bottom: 2rem;
+}
+@media (max-width: 767px) {
+  .wrapper-error img {
+    max-width: 320px;
+  }
+}
 body.about {
   color: var(--main-about-primary);
   background-color: var(--main-bg-about);
@@ -2524,7 +2543,9 @@ body.work .logo path {
 }
 @media (max-width: 767px) {
   .case-small__inner:hover {
-    transform: translateY(-1.5rem);
+    transform: translateY(0);
+    background: var(--background) !important;
+    color: currentColor !important;
   }
 }
 .case-small__inner:hover .btn-category {

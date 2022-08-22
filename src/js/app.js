@@ -83,19 +83,28 @@ const swup = new Swup({
                         document.querySelector('.header').classList.toggle('active-menu');
                     }                    
 
-                    document.querySelector('.header-big__bg').onclick = function() {
-                        document.querySelector('body').classList.remove('active-reel');
-                        var player = document.getElementById("reel");
-                        var data = { method: "pause" };
-                        player.contentWindow.postMessage(JSON.stringify(data), "*");
+                    var element =  document.querySelector('.header-big__bg');
+                    if (typeof(element) != 'undefined' && element != null)
+                    {
+                        document.querySelector('.header-big__bg').onclick = function() {
+                            document.querySelector('body').classList.remove('active-reel');
+                            var player = document.getElementById("reel");
+                            var data = { method: "pause" };
+                            player.contentWindow.postMessage(JSON.stringify(data), "*");
+                        }
                     }
-                    
-                    document.querySelector('.play-reel').onclick = function() {
-                        document.querySelector('body').classList.add('active-reel');
-                        var player = document.getElementById("reel");
-                        var data = { method: "play" };
-                        player.contentWindow.postMessage(JSON.stringify(data), "*");
+
+                    var element =  document.querySelector('.header-big__bg');
+                    if (typeof(element) != 'undefined' && element != null)
+                    {
+                        document.querySelector('.play-reel').onclick = function() {
+                            document.querySelector('body').classList.add('active-reel');
+                            var player = document.getElementById("reel");
+                            var data = { method: "play" };
+                            player.contentWindow.postMessage(JSON.stringify(data), "*");
+                        }
                     }
+                
                     
                     // Get a reference to the splash dialog
                     animationSwoosh.goToAndStop(58, true);
@@ -238,34 +247,39 @@ var splashThree = document.querySelector(".title-3");
 var splashFour = document.querySelector(".title-4");
 var splashFive = document.querySelector(".title-5");
 
-// .5 seconds later, hide the splash
-setTimeout(function(){
-    splash.classList.remove("swoosh-title--active");
-    splashTwo.classList.add("swoosh-title--active");
-    animationSwoosh.playSegments([0, 58], true);
-    
-}, 5000);
+var element =  document.querySelector('.swoosh-title--active');
+if (typeof(element) != 'undefined' && element != null)
+{
+    // .5 seconds later, hide the splash
+    setTimeout(function(){
+        splash.classList.remove("swoosh-title--active");
+        splashTwo.classList.add("swoosh-title--active");
+        animationSwoosh.playSegments([0, 58], true);
+        
+    }, 5000);
 
-setTimeout(function(){
-    splashTwo.classList.remove("swoosh-title--active");
-    splashThree.classList.add("swoosh-title--active");
-    animationSwoosh.playSegments([0, 58], true);
-    
-}, 9000);
+    setTimeout(function(){
+        splashTwo.classList.remove("swoosh-title--active");
+        splashThree.classList.add("swoosh-title--active");
+        animationSwoosh.playSegments([0, 58], true);
+        
+    }, 9000);
 
-setTimeout(function(){
-    splashThree.classList.remove("swoosh-title--active");
-    splashFour.classList.add("swoosh-title--active");
-    animationSwoosh.playSegments([0, 58], true);
-    
-}, 14000);
+    setTimeout(function(){
+        splashThree.classList.remove("swoosh-title--active");
+        splashFour.classList.add("swoosh-title--active");
+        animationSwoosh.playSegments([0, 58], true);
+        
+    }, 14000);
 
-setTimeout(function(){
-    splashFour.classList.remove("swoosh-title--active");
-    splashFive.classList.add("swoosh-title--active");
-    animationSwoosh.playSegments([0, 58], true);
-    
-}, 18000);
+    setTimeout(function(){
+        splashFour.classList.remove("swoosh-title--active");
+        splashFive.classList.add("swoosh-title--active");
+        animationSwoosh.playSegments([0, 58], true);
+        
+    }, 18000);
+}
+
 
 AOS.init();
 
@@ -297,19 +311,28 @@ document.querySelector('.menu-icon').onclick = function() {
     document.querySelector('.header').classList.toggle('active-menu');
 }
 
-document.querySelector('.header-big__bg').onclick = function() {
-    document.querySelector('body').classList.remove('active-reel');
-    var player = document.getElementById("reel");
-    var data = { method: "pause" };
-    player.contentWindow.postMessage(JSON.stringify(data), "*");
+var element =  document.querySelector('.header-big__bg');
+if (typeof(element) != 'undefined' && element != null)
+{
+    document.querySelector('.header-big__bg').onclick = function() {
+        document.querySelector('body').classList.remove('active-reel');
+        var player = document.getElementById("reel");
+        var data = { method: "pause" };
+        player.contentWindow.postMessage(JSON.stringify(data), "*");
+    }
 }
 
-document.querySelector('.play-reel').onclick = function() {
-    document.querySelector('body').classList.add('active-reel');
-    var player = document.getElementById("reel");
-    var data = { method: "play" };
-    player.contentWindow.postMessage(JSON.stringify(data), "*");
+var element =  document.querySelector('.header-big__bg');
+if (typeof(element) != 'undefined' && element != null)
+{
+    document.querySelector('.play-reel').onclick = function() {
+        document.querySelector('body').classList.add('active-reel');
+        var player = document.getElementById("reel");
+        var data = { method: "play" };
+        player.contentWindow.postMessage(JSON.stringify(data), "*");
+    }
 }
+
 
 document.querySelectorAll('li').forEach(item => {
     item.addEventListener('click', event => {
