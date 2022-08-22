@@ -28,13 +28,6 @@ const swup = new Swup({
                         onComplete: next
                     });
 
-                    document.querySelectorAll('.case-small').forEach(item => {
-                        item.addEventListener('click', event => {
-                            document.querySelectorAll('case-small').forEach(i => {i.classList.remove('active')})
-                            item.classList.add('active')
-                        })
-                    })
-
                     var animation = bodymovin.loadAnimation({
                         container: document.getElementById('hand'),
                         renderer: 'svg',
@@ -104,8 +97,10 @@ const swup = new Swup({
                             player.contentWindow.postMessage(JSON.stringify(data), "*");
                         }
                     }
-                
                     
+                    var element =  document.querySelector('.header-big__bg');
+                    if (typeof(element) != 'undefined' && element != null)
+                    {
                     // Get a reference to the splash dialog
                     animationSwoosh.goToAndStop(58, true);
                     var splash = document.querySelector(".title-1");
@@ -142,7 +137,7 @@ const swup = new Swup({
                         animationSwoosh.playSegments([0, 58], true);
                         
                     }, 18000);
-
+                    }
                 },
                 out: (next) => {
                     document.querySelector('#swup').style.opacity = 1;
@@ -150,27 +145,8 @@ const swup = new Swup({
                         opacity: 0,
                         onComplete: next
                     });
-
-                    document.querySelectorAll('.case-small').forEach(item => {
-                        item.addEventListener('click', event => {
-                            document.querySelectorAll('case-small').forEach(i => {i.classList.remove('active')})
-                            item.classList.add('active')
-                        })
-                    })
                 }
-            },
-            {
-                from: '/work',
-                to: 'case-transition',
-                in: (next) => {
-                },
-                out: (next) => {
-                    TweenMax.to(document.querySelector('.active .case-small__inner'), .8, 
-                    {css:{scaleY:"14", zindex:"10"}, ease: 'cubic-bezier(0.075, 0.82, 0.165, 1)', 
-                    onComplete: next
-                    });
-                }
-            },
+            }
         ]),
         new SwupBodyClassPlugin(),
         new SwupScrollPlugin({
@@ -342,15 +318,6 @@ document.querySelectorAll('li').forEach(item => {
     })
 })
 
-
-document.querySelectorAll('.case-small').forEach(item => {
-    item.addEventListener('click', event => {
-        document.querySelectorAll('case-small').forEach(i => {i.classList.remove('active')})
-        item.classList.add('active')
-        document.querySelectorAll('text-link').classList.remove('active')
-    })
-})
-
 // reload components for each container after transition
 swup.on('contentReplaced', function () {
     document.querySelectorAll('[data-swup]').forEach(function (container) {
@@ -362,12 +329,5 @@ swup.on('contentReplaced', function () {
         var data = { method: "pause" };
         player.contentWindow.postMessage(JSON.stringify(data), "*");
 
-        document.querySelectorAll('.case-small').forEach(item => {
-            item.addEventListener('click', event => {
-                document.querySelectorAll('case-small').forEach(i => {i.classList.remove('active')})
-                item.classList.add('active')
-                document.querySelectorAll('text-link').classList.remove('active')
-            })
-        })
     });
 });
