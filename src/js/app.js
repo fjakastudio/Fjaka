@@ -97,7 +97,7 @@ const swup = new Swup({
                             player.contentWindow.postMessage(JSON.stringify(data), "*");
                         }
                     }
-                    
+
                     var element =  document.querySelector('.header-big__bg');
                     if (typeof(element) != 'undefined' && element != null)
                     {
@@ -330,4 +330,24 @@ swup.on('contentReplaced', function () {
         player.contentWindow.postMessage(JSON.stringify(data), "*");
 
     });
+});
+
+var lastScrollTop; // This Varibale will store the top position
+
+window.addEventListener('scroll',function(){
+ //on every scroll this funtion will be called
+  
+  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  //This line will get the location on scroll
+  
+  if(scrollTop > lastScrollTop){ //if it will be greater than the previous
+    document.getElementById('header').style.opacity='0';
+    //set the value to the negetive of height of navbar 
+  }
+  
+  else{
+    document.getElementById('header').style.opacity='1';
+  }
+  
+  lastScrollTop = scrollTop; //New Position Stored
 });

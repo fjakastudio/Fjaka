@@ -1,5 +1,12 @@
 .case-intro
     color: var(--text-color);
+    position relative
+
+    .fullsize-link
+        display: none
+
+        @media $mobile
+            display: block
 
 .case-intro__text
     padding: 2rem
@@ -7,6 +14,9 @@
 
     @media $mobile
         padding: 1.5rem 1rem
+
+        .btn
+            display: none
 
 .case-intro__pic
     display: block
