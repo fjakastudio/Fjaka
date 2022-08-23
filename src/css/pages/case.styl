@@ -169,6 +169,7 @@ body.thredx .logo path
         padding: 1rem
         grid-gap: 1rem;
         overflow: hidden
+        display: block
 
     &--dark
         background: #161616
@@ -178,7 +179,7 @@ body.thredx .logo path
         padding-bottom: 11.112vw
 
         @media $mobile
-            padding-bottom: 10rem
+            padding-bottom: 5rem
 
     &--white
         background: #fff
@@ -246,9 +247,8 @@ body.thredx .logo path
     @media $desktop-xl
         margin-bottom: .5vw
 
-
     @media $mobile
-        margin-bottom: 0
+        margin-bottom: 3rem
 
     &--small-margin
         margin-bottom: 2.778vw
@@ -256,11 +256,17 @@ body.thredx .logo path
     &--no-margin
         margin-bottom: 0
 
+        @media $mobile
+            margin-bottom: 0
+
     &--stick-margin
         margin-bottom: -2.5rem
 
         @media $mobile
-            margin-bottom: -1.5rem
+            margin-bottom: 0
+
+    &--text
+        margin-bottom: 1rem
 
     img
         object-fit: cover
@@ -314,10 +320,6 @@ body.thredx .logo path
 .col-12
     grid-column: span 12;
 
-    @media $mobile
-        margin-bottom: 2rem
-
-
 // .col figure,
 // .col img
 //     height: 100%
@@ -355,9 +357,9 @@ body.thredx .logo path
     grid-column-end: 9;
 
     @media $mobile
-        grid-column-start: none;
-        grid-column-end: none;
-        grid-column: span 12
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
     
 .full-width-pic
     margin-left: -2.5rem
