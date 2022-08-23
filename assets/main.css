@@ -2544,7 +2544,7 @@ body.work .logo path {
 @media (max-width: 767px) {
   .case-small__inner:hover {
     transform: translateY(0);
-    background: var(--background) !important;
+    background: var(--main-bg-work) !important;
     color: currentColor !important;
   }
 }
@@ -3043,6 +3043,9 @@ body.active-menu {
   -moz-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
+}
+a {
+  -webkit-tap-highlight-color: transparent;
 }
 @-moz-keyframes slideUp {
   0% {
