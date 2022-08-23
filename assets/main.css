@@ -1438,12 +1438,12 @@ video {
     visibility: visible;
   }
 }
-.active-reel .front iframe {
+.active-reel iframe {
   opacity: 1;
   visibility: visible;
 }
 @media (max-width: 767px) {
-  .active-reel .front iframe {
+  .active-reel iframe {
     opacity: 0;
     visibility: hidden;
   }
@@ -2375,7 +2375,7 @@ body.shop .logo path {
 }
 @media (max-width: 767px) {
   .shop-wrapper {
-    padding: 0 1.5rem;
+    padding: 0 1rem;
   }
 }
 .shop-item {
