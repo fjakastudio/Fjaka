@@ -11,6 +11,7 @@
 
 @media $mobile
     .header nav
+        visibility: hidden;
         position: fixed;
         left: 0;
         right: 0;
@@ -23,8 +24,7 @@
         align-items: center;
         justify-content: center;
         display: flex
-        transition: .6s ease;
-        visibility: hidden;
+        transition: opacity .6s ease;
         opacity: 0
 
     .header ul

@@ -2,18 +2,6 @@ body.work
     color: var(--main-work-primary)
     background-color: var(--main-bg-work)
 
-.work .wrapper
-    background-image: url('../assets/images/pen.svg')
-    background-repeat: no-repeat;
-    background-position: 100% 0;
-    background-size: 500px;
-
-    @media $desktop-xl
-        background-size: 730px;
-
-    @media $mobile
-        background-image: none
-
 body.work .logo path
     fill: var(--main-work-primary)
 
@@ -37,129 +25,120 @@ body.work .logo path
         padding-top: 7rem
 
 .work .wrapper-inner
-    padding: 0 2rem
+    padding: 0 2.5rem
 
     @media $mobile
         padding: 0 1rem 1rem
 
 .case-wrapper
-    margin-top: 11vw
+    margin: 6vw 0 16vw 0
+    padding: 0 2.5rem
 
     @media $mobile
-        margin-top: 5rem
+        padding: 0 1rem
+        margin-bottom: 8rem
+        margin-top: 0
 
-.animate__animated.case-small
-    animation-duration: .6s
-
-.case-small:last-child 
-    height: 210px
+.case-medium
+    width: 40.416666666666664%
+    position relative
 
     @media $mobile
-        height: 160px
+        width: 100%
 
-.case-small:last-child .case-small__inner:hover
-    transform: translateY(0)
+.case-medium-large
+    width: 56.94444444444444%
+    position relative
 
-.active.case-small
-    z-index: 2
-    border-top: none
+    @media $mobile
+        width: 100%
 
-.active .case-small__inner
-    background: var(--background)
-    color: var(--text)
-    border-top: none
-    transform-origin: center center
+.case-full
+    position: relative
 
-.active .case-small__inner > *
-    opacity: 0
-
-.case-small__inner
+.case-row
     display: flex
-    border-top: .5px solid var(--main-stroke-work)
-    background-color: var(--main-bg-work)
-    padding: 1.5rem 2rem 2rem;
-    width: 100%
-    transition: .6s cubic-bezier(0.075, 0.82, 0.165, 1)
-    height: 100%
+    grid-gap: 2.5rem;
+    margin-bottom: 9vw
 
     @media $mobile
-        padding: 1rem 1rem 0 1rem
-    
-    &:hover
-        position: absolute;
-        transform: translateY(-2.5rem)
-        background: var(--background)
-        color: var(--text)
+        width: 100%
+        flex-direction: column
+        grid-gap: 3rem
+        margin-bottom: 3rem
 
-        @media $desktop-xl
-            transform: translateY(-3.5rem)
+.case-wrapper img,
+.case-wrapper video
+    border-radius: 6px
+
+.case-medium__inner
+    position relative
+
+.case-medium__inner h2,
+.case-medium__inner p
+    margin-right: 2.5rem
+
+.case-medium-large .case-medium__inner h2,
+.case-medium-large .case-medium__inner p
+    margin-right: 5rem
+
+.case-medium img,
+.case-medium video
+    height: 45vh
+    object-fit: cover
+    width: 100%
+    margin-bottom: 1.5rem
+
+    @media $mobile
+        height: 50vh
+
+.case-medium-large img,
+.case-medium-large video
+    height: 65vh
+    object-fit: cover
+    width: 100%
+    margin-bottom: 1.5rem
+
+    @media $mobile
+        height: 50vh
+
+.case-full img,
+.case-full video
+    height: 70vh
+    object-fit: cover
+    width: 100%
+
+    @media $mobile
+        height: 50vh
+
+.case-full
+    margin-bottom: 9vw
+    margin-left: -2.5rem
+    margin-right: -2.5rem
+
+    @media $mobile
+        margin-left: -1rem
+        margin-right: -1rem
+        margin-bottom: 3rem
+
+    img,
+    video
+        margin-bottom: 2.5rem
+        border-radius: 0
 
         @media $mobile
-            transform: translateY(0)
-            background: var(--main-bg-work) !important
-            color: currentColor !important
+            margin-bottom: 1.5rem
 
-        .btn-category 
-            border-color: var(--text)
-            color: var(--text)
-
-.case-small
-    background-color: var(--main-bg-work)
-    display: flex
-    margin-top: -80px
-    position relative
-    transition: .3s
-    height: 160px;
-    width: 100%
-    animation-delay: .6s;
+.case-full__inner__text
+    width: 60%
+    padding-left: 2.5rem
 
     @media $mobile
-        height: 125px
+        width: 100%
+        padding-left: 1rem
 
-    a 
-        position absolute
-        top: 0
-        right: 0
-        left: 0
-        bottom: 0
-
-    &:nth-child(2)
-        animation-delay: (.6s+.2s);
-
-    &:nth-child(3)
-        animation-delay: (.6s+.4s);
-
-    &:nth-child(4)
-        animation-delay: (.6s+.6s);
-
-    &:nth-child(5)
-        animation-delay: (.6s+.8s);
-
-    &:nth-child(6)
-        animation-delay: (.6s+1s);     
-
-    &:nth-child(7)
-        animation-delay: (.6s+1.2s); 
-
-    &:nth-child(8)
-        animation-delay: (.6s+1.4s); 
-
-    &:nth-child(9)
-        animation-delay: (.6s+1.6s);   
-
-    &:nth-child(10)
-        animation-delay: (.6s+1.8s); 
-
-    &:nth-child(11)
-        animation-delay: (.6s+2s);
-
-    h2 
-        font-size: clamp(2.5rem, 4vw + 1.25rem, 5.625rem);
-        line-height: 1.1
-        margin-right: 1rem
-
-.category-wrapper
-    display: flex
-
-    @media $mobile
-        display: none
+.case-medium__inner,
+.case-full__inner
+    
+    >*:last-child
+        margin-bottom: 0
