@@ -1949,6 +1949,9 @@ body.thredx .logo path {
 .col--text {
   margin-bottom: 1rem;
 }
+.col--big-margin {
+  margin-bottom: 7.668vw;
+}
 .col img {
   object-fit: cover;
   object-position: center;
