@@ -2515,8 +2515,8 @@ body.work .logo path {
   .case-row {
     width: 100%;
     flex-direction: column;
-    grid-gap: 3rem;
-    margin-bottom: 3rem;
+    grid-gap: 5rem;
+    margin-bottom: 5rem;
   }
 }
 .case-wrapper img,
@@ -2544,7 +2544,7 @@ body.work .logo path {
 @media (max-width: 767px) {
   .case-medium img,
   .case-medium video {
-    height: 50vh;
+    height: 40vh;
   }
 }
 .case-medium-large img,
@@ -2557,7 +2557,7 @@ body.work .logo path {
 @media (max-width: 767px) {
   .case-medium-large img,
   .case-medium-large video {
-    height: 50vh;
+    height: 40vh;
   }
 }
 .case-full img,
@@ -2569,7 +2569,7 @@ body.work .logo path {
 @media (max-width: 767px) {
   .case-full img,
   .case-full video {
-    height: 50vh;
+    height: 40vh;
   }
 }
 .case-full {
@@ -2581,7 +2581,7 @@ body.work .logo path {
   .case-full {
     margin-left: -1rem;
     margin-right: -1rem;
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
   }
 }
 .case-full img,
