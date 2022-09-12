@@ -1042,6 +1042,14 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 .wrapper {
   padding: 9rem 2.5rem 0 2.5rem;
 }
+.wrapper--margin {
+  margin-bottom: 7rem;
+}
+@media (max-width: 767px) {
+  .wrapper--margin {
+    margin-bottom: 0;
+  }
+}
 @media (min-width: 2000px) {
   .wrapper {
     padding: 12rem 2.5rem 0 2.5rem;
