@@ -54,14 +54,6 @@ const swup = new Swup({
                         path: '../assets/lottie/shining-process.json'
                     })
 
-                    var animation = bodymovin.loadAnimation({
-                        container: document.getElementById('front-hand'),
-                        renderer: 'svg',
-                        loop: false,
-                        autoplay: true,
-                        path: '../assets/lottie/arms-button.json'
-                    })
-
                     var animationSwoosh = bodymovin.loadAnimation({
                         container: document.getElementById('swoosh'),
                         renderer: 'svg',
@@ -178,14 +170,6 @@ var animation = bodymovin.loadAnimation({
     loop: true,
     autoplay: true,
     path: '../assets/lottie/ball.json'
-})
-
-var animation = bodymovin.loadAnimation({
-    container: document.getElementById('front-hand'),
-    renderer: 'svg',
-    loop: false,
-    autoplay: true,
-    path: '../assets/lottie/arms-button.json'
 })
 
 var animation = bodymovin.loadAnimation({
