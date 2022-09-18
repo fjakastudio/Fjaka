@@ -2687,12 +2687,7 @@ body.work .logo path {
   position: relative;
 }
 .case-intro .fullsize-link {
-  display: none;
-}
-@media (max-width: 767px) {
-  .case-intro .fullsize-link {
-    display: block;
-  }
+  display: block;
 }
 .case-intro__text {
   padding: 2rem;
