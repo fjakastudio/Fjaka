@@ -1134,13 +1134,13 @@ h4,
   letter-spacing: 0.5px;
 }
 .big-paragraph {
-  font-size: clamp(1rem, 1.5vw, 2rem);
+  font-size: clamp(1.2rem, 1.5vw, 2rem);
   line-height: 1.4;
   margin: 0 0 1rem;
 }
 p,
 .paragraph {
-  font-size: clamp(1rem, 1.67vw, 2rem);
+  font-size: clamp(1.2rem, 1.67vw, 2rem);
   margin: 0 0 1.5rem;
   line-height: 1.4;
 }
@@ -1960,6 +1960,11 @@ body.thredx .logo path {
 .col--big-margin {
   margin-bottom: 7.668vw;
 }
+@media (max-width: 767px) {
+  .col--big-margin {
+    margin-bottom: 15.336vw;
+  }
+}
 .col img {
   object-fit: cover;
   object-position: center;
@@ -2357,6 +2362,7 @@ body.shop .logo path {
 @media (max-width: 767px) {
   .small-header {
     width: 100%;
+    margin: 0 auto 10vw;
   }
 }
 .shop .wrapper {
