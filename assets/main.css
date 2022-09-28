@@ -1259,6 +1259,8 @@ a {
     left: 1rem;
     right: 1rem;
     top: 1.5rem;
+    opacity: 1 !important;
+    position: absolute;
   }
 }
 .logo {
@@ -1528,7 +1530,7 @@ body.about .logo path {
 }
 @media (max-width: 767px) {
   .about .wrapper-inner--burgundy {
-    padding: 8rem 1rem 1rem 1rem;
+    padding: 8rem 1rem 2rem 1rem;
     grid-gap: 1rem;
     background-size: 100% 30%;
   }
