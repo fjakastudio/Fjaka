@@ -107,28 +107,28 @@ const swup = new Swup({
                         splashTwo.classList.add("swoosh-title--active");
                         animationSwoosh.playSegments([0, 58], true);
                         
-                    }, 5000);
+                    }, 3000);
                     
                     setTimeout(function(){
                         splashTwo.classList.remove("swoosh-title--active");
                         splashThree.classList.add("swoosh-title--active");
                         animationSwoosh.playSegments([0, 58], true);
                         
-                    }, 9000);
+                    }, 6000);
                     
                     setTimeout(function(){
                         splashThree.classList.remove("swoosh-title--active");
                         splashFour.classList.add("swoosh-title--active");
                         animationSwoosh.playSegments([0, 58], true);
                         
-                    }, 14000);
+                    }, 9000);
                     
                     setTimeout(function(){
                         splashFour.classList.remove("swoosh-title--active");
                         splashFive.classList.add("swoosh-title--active");
                         animationSwoosh.playSegments([0, 58], true);
                         
-                    }, 18000);
+                    }, 12000);
                     }
                 },
                 out: (next) => {
@@ -216,28 +216,28 @@ if (typeof(element) != 'undefined' && element != null)
         splashTwo.classList.add("swoosh-title--active");
         animationSwoosh.playSegments([0, 58], true);
         
-    }, 5000);
+    }, 3000);
 
     setTimeout(function(){
         splashTwo.classList.remove("swoosh-title--active");
         splashThree.classList.add("swoosh-title--active");
         animationSwoosh.playSegments([0, 58], true);
         
-    }, 9000);
+    }, 6000);
 
     setTimeout(function(){
         splashThree.classList.remove("swoosh-title--active");
         splashFour.classList.add("swoosh-title--active");
         animationSwoosh.playSegments([0, 58], true);
         
-    }, 14000);
+    }, 9000);
 
     setTimeout(function(){
         splashFour.classList.remove("swoosh-title--active");
         splashFive.classList.add("swoosh-title--active");
         animationSwoosh.playSegments([0, 58], true);
         
-    }, 18000);
+    }, 12000);
 }
 
 
