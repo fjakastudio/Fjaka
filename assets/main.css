@@ -1417,7 +1417,7 @@ a {
 .header-big h2,
 .btn-wrapper .btn,
 video {
-  transition: opacity 0.6s;
+  transition: 0.6s;
   opacity: 1;
 }
 .active-reel {
@@ -2636,6 +2636,7 @@ body.work .logo path {
   background: transparent;
   font-size: clamp(1rem, 1.4vw, 1.5rem);
   cursor: pointer;
+  transition: ease-in 0.3s;
 }
 @media (max-width: 767px) {
   .btn.play-reel {
