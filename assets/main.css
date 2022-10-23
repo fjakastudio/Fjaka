@@ -1417,7 +1417,7 @@ a {
 .header-big h2,
 .btn-wrapper .btn,
 video {
-  transition: 0.6s;
+  transition: opacity 0.6s, background-color 0.6s, color 0.6s;
   opacity: 1;
 }
 .active-reel {
