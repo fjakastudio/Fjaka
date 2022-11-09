@@ -266,6 +266,31 @@ try { // prevent exception on browsers not supporting DOM styleSheets properly
 } catch (ex) {}
 }
 
+
+var element =  document.querySelector(".front");
+if (typeof(element) != 'undefined' && element != null)
+{
+    var targets = document.querySelectorAll('section')
+    var obsOptions = {
+        root: null, // measure against the viewport
+        threshold: .9 // how much of the element should be visible before handler is triggered
+    }
+
+    let handler = (entries, opts) => {
+        entries.forEach(entry => {
+        if (entry.intersectionRatio > opts.thresholds[0]) {
+            document.querySelector("header").classList.remove(document.querySelector("header").classList);
+            document.querySelector("header").classList.add(entry.target.id + '-active');
+        }
+        })
+    }
+
+    targets.forEach(el => {
+        var observer = new IntersectionObserver(handler, obsOptions);
+        observer.observe(el);
+    })
+}
+
 document.querySelector('.menu-icon').onclick = function() {
     document.querySelector('body').classList.toggle('active-menu');
     document.querySelector('.header').classList.toggle('active-menu');
@@ -313,25 +338,30 @@ swup.on('contentReplaced', function () {
         var data = { method: "pause" };
         player.contentWindow.postMessage(JSON.stringify(data), "*");
 
+
+        var element =  document.querySelector(".front");
+        if (typeof(element) != 'undefined' && element != null)
+        {
+            var targets = document.querySelectorAll('section')
+            var obsOptions = {
+                root: null, // measure against the viewport
+                threshold: .9 // how much of the element should be visible before handler is triggered
+            }
+
+            let handler = (entries, opts) => {
+                entries.forEach(entry => {
+                if (entry.intersectionRatio > opts.thresholds[0]) {
+                    document.querySelector("header").classList.remove(document.querySelector("header").classList);
+                    document.querySelector("header").classList.add(entry.target.id + '-active');
+                }
+                })
+            }
+
+            targets.forEach(el => {
+                var observer = new IntersectionObserver(handler, obsOptions);
+                observer.observe(el);
+            })
+        }
+
     });
-});
-
-var lastScrollTop; // This Varibale will store the top position
-
-window.addEventListener('scroll',function(){
- //on every scroll this funtion will be called
-  
-  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  //This line will get the location on scroll
-  
-  if(scrollTop > lastScrollTop){ //if it will be greater than the previous
-    document.getElementById('header').style.opacity='0';
-    //set the value to the negetive of height of navbar 
-  }
-  
-  else{
-    document.getElementById('header').style.opacity='1';
-  }
-  
-  lastScrollTop = scrollTop; //New Position Stored
 });

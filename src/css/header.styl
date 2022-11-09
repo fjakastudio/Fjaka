@@ -1,4 +1,4 @@
-.header 
+#header 
     position: fixed;
     left: 2.5rem;
     right: 2.5rem;
@@ -35,11 +35,11 @@
 .logo path
     transition: .3s ease-in
 
-.header nav .active a::before
+#header nav .active a::before
     transform-origin: 0% 50%;
     transform: scale3d(1, 1, 1);
 
-.header nav a 
+#header nav a 
     font-size: clamp(1rem, 0.3vw + 1rem, 1.625rem);
     text-decoration: none
     font-weight: 500
@@ -75,18 +75,18 @@
         transform: scale3d(1, 1, 1);
 
 
-.header ul 
+#header ul 
     list-style: none
     margin: 0
     padding: 0
     display: flex
 
-.header li
+#header li
     margin: 0 0 0 2rem
     padding: 0
 
     @media $mobile
         margin: 0 0 0 1rem
 
-.header li:first-child
+#header li:first-child
     margin: 0

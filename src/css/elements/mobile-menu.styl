@@ -1,16 +1,16 @@
 .active-menu .logo path
     fill: var(--main-yellow) !important
 
-.active-menu.header nav
+.active-menu#header nav
     opacity: 1;
-    visibility: visible;
+    visibility: bodyvisible;
 
-.header.active-menu
+#header.active-menu
     @media $mobile
         mix-blend-mode: normal !important;
 
 @media $mobile
-    .header nav
+    #header nav
         visibility: hidden;
         position: fixed;
         left: 0;
@@ -27,10 +27,10 @@
         transition: opacity .6s ease;
         opacity: 0
 
-    .header ul
+    #header ul
         flex-direction: column
 
-    .header li
+    #header li
         text-align: center
 
 .menu-icon

@@ -1,18 +1,31 @@
 body.front 
-    color: var(--main-yellow)
-    background-color: var(--main-bg-color)
+    color: #fff;
+    background-color: #171259;
 
 body.front .logo path 
-    fill: var(--main-yellow)
+    fill: #fff;
 
-.front .header nav a
-    color: var(--main-yellow)
+.front #header nav a
+    color: #fff;
 
-.front .header nav a::before 
-    background: var(--main-yellow)
+.front #header nav a::before 
+    background: #fff;
 
 .front .menu-icon span {
-    background-color: var(--main-yellow)
+    background-color: #fff;
+}
+
+.front #header.nori-active path
+    fill: #040875;
+
+.front #header.nori-active nav a
+    color: #040875;
+
+.front #header.nori-active nav a::before 
+    background: #040875;
+
+.front .nori-active .menu-icon span {
+    background-color: #040875;
 }
 
 .shadow-front 
@@ -23,7 +36,7 @@ body.front .logo path
     z-index: -1
 
     @media $mobile
-        top: -1rem
+        top: -2rem
 
 .shadow-front-bottom 
     position absolute
@@ -34,7 +47,7 @@ body.front .logo path
     transform: rotate(180deg)
 
     @media $mobile
-        bottom: -1rem
+        bottom: -2rem
 
 .front-info
     position: relative;

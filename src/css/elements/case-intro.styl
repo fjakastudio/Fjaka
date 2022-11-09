@@ -2,15 +2,35 @@
     color: var(--text-color);
     position relative
 
+    &::before
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 370px;
+        background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+        opacity: 0.2;
+
     .fullsize-link
         display: block
 
+    .btn
+        z-index: 10
+        position absolute
+        left: 2rem
+        bottom: 2rem
+
+        @media $mobile
+            left: 1.5rem
+
 .case-intro__text
-    padding: 2rem
-    background-color: var(--background-color)
+    padding: 2rem 2rem 7rem 2rem
+    position absolute
+    bottom: 0
 
     @media $mobile
-        padding: 1.5rem 1rem
+        padding: 1.5rem 1rem 6rem 1.5rem
 
         .btn
             display: none
@@ -18,33 +38,28 @@
 .case-intro__pic
     display: block
     object-fit: cover
-    height: 40vw;
+    height: 100vh;
     width: 100%;
     object-position: 50% 40%;
 
-    @media $mobile
-        height: 100vw
-
-
 .case-intro__text__inner
-    display: flex
-    flex-direction: row
-    justify-content: space-around
+    color: var(--case-color);
 
-    @media $mobile
-        flex-direction: column
+    .btn--outline
+        display: inline-block;
 
     h2
-        
+        width: 62%
+        margin: 0
+
         @media $mobile
             flex-direction: column
             margin-bottom: 0
+            width: 100%
 
     p
+        width: 50%
         margin-top: .75rem
 
-    > *
-        width: 50%
-
         @media $mobile
-            width: 100%
+            margin-bottom: .5rem
