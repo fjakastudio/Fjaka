@@ -216,28 +216,28 @@ if (typeof(element) != 'undefined' && element != null)
         splashTwo.classList.add("swoosh-title--active");
         animationSwoosh.playSegments([0, 58], true);
         
-    }, 3000);
+    }, 5000);
 
     setTimeout(function(){
         splashTwo.classList.remove("swoosh-title--active");
         splashThree.classList.add("swoosh-title--active");
         animationSwoosh.playSegments([0, 58], true);
         
-    }, 6000);
+    }, 10000);
 
     setTimeout(function(){
         splashThree.classList.remove("swoosh-title--active");
         splashFour.classList.add("swoosh-title--active");
         animationSwoosh.playSegments([0, 58], true);
         
-    }, 9000);
+    }, 15000);
 
     setTimeout(function(){
         splashFour.classList.remove("swoosh-title--active");
         splashFive.classList.add("swoosh-title--active");
         animationSwoosh.playSegments([0, 58], true);
         
-    }, 12000);
+    }, 18000);
 }
 
 
@@ -307,18 +307,6 @@ if (typeof(element) != 'undefined' && element != null)
     }
 }
 
-var element =  document.querySelector('.header-big__bg');
-if (typeof(element) != 'undefined' && element != null)
-{
-    document.querySelector('.play-reel').onclick = function() {
-        document.querySelector('body').classList.add('active-reel');
-        var player = document.getElementById("reel");
-        var data = { method: "play" };
-        player.contentWindow.postMessage(JSON.stringify(data), "*");
-    }
-}
-
-
 document.querySelectorAll('li').forEach(item => {
     item.addEventListener('click', event => {
         document.querySelectorAll('li').forEach(i => {i.classList.remove('active')})
@@ -326,6 +314,26 @@ document.querySelectorAll('li').forEach(item => {
         document.querySelectorAll('text-link').classList.remove('active')
     })
 })
+
+const loaderEl = document.getElementsByClassName('fullpage-loader')[0];
+document.addEventListener('readystatechange', (event) => {
+	// const readyState = "interactive";
+	const readyState = "complete";
+    
+	if(document.readyState == readyState) {
+		// when document ready add lass to fadeout loader
+
+        // when loader is invisible remove it from the DOM
+		setTimeout(()=>{
+            loaderEl.classList.add('fullpage-loader--invisible');
+		}, 1000)
+		
+		// when loader is invisible remove it from the DOM
+		setTimeout(()=>{
+			loaderEl.parentNode.removeChild(loaderEl);
+		}, 2000)
+	}
+});
 
 // reload components for each container after transition
 swup.on('contentReplaced', function () {

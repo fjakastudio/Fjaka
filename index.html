@@ -30,6 +30,11 @@
 </head>
 <body class="front">
 
+    <div class="fullpage-loader">
+
+        <div class="loader-5 center"><span></span></div>
+    </div>
+
     <main class="wrapper" id="swup">
 
         <header class="header" id="header">
@@ -73,38 +78,50 @@
     
         
         <div class="header-big">
-            
-            <h1 g-component="SeparateText" g-options='{"delay": 0.1}' class="heading-one">We’re a design studio that mixes digital and branding to create</h1>
-            <h2 class="heading-one">
-                <div id="swoosh"></div>
-                <span g-component="SeparateText" class="swoosh-title title-1 swoosh-title--active">amazing websites</span>
-                <span g-component="SeparateText" class="swoosh-title title-2">colorful illustrations</span>
-                <span g-component="SeparateText" class="swoosh-title title-3">impactful products</span>
-                <span g-component="SeparateText" class="swoosh-title title-4">incredible apps</span>
-                <span g-component="SeparateText" class="swoosh-title title-5">unforgettable brands</span>
-            </h2>
-            <div class="btn-wrapper animate__animated animate__fadeIn">
-                <a href="/work"                 
-                class="btn btn--outline"
-                style="--btn-color: #fff;
-                --btn-text: #080619;" title="work">Explore works</a>
-                <button                 
-                class="btn btn--outline play-reel"
-                style="--btn-color: #fff;
-                --btn-text: #080619;" onclick="play_video()">See showreel</button>
-            </div>
 
             <div class="header-big__bg">
                 <video class="show-reel" width="100%" height="100%" loop muted playsinline autoplay="autoplay" style="pointer-events: none;">
-                    <source src="../assets/images/bg-web.webm" type="video/webm" />
                     <source src="../assets/images/bg-web.mp4" type="video/mp4" />
                 </video>
-
-                <iframe id="reel" class="pause-reel" src="https://player.vimeo.com/video/741137704?h=f436b35e8c&amp;title=0&amp;byline=0&amp;portrait=0&amp;speed=0&amp;loop=1&amp;player_id=0&amp;app_id=58479" width="1920" height="1080" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Showreel Fjaka"></iframe>
             </div>
         </div>
 
-        <section class="case-intro" id="buddies">
+        <div class="front-info">
+            <img class="shadow-front lazyautosizes ls-is-cached lazyloaded" src="./assets/images/shadow-dissolve.webp" data-sizes="auto" data-src="./assets/images/shadow-dissolve.webp" data-srcset="./assets/images/shadow-dissolve.webp 500w,
+            ./assets/images/shadow-dissolve.webp 640w,
+            ./assets/images/shadow-dissolve.webp 1024w" alt="shadow" sizes="1130px" srcset="./assets/images/shadow-dissolve.webp 500w,
+            ./assets/images/shadow-dissolve.webp 640w,
+            ./assets/images/shadow-dissolve.webp 1024w">
+
+            <div class="front-info__text" data-aos="fade" data-aos-offset="50">
+                <h1 g-component="SeparateText" g-options='{"delay": 0.1}' class="heading-one">We’re a design studio that mixes digital and branding to create</h1>
+                <h2 class="heading-one">
+                    <div id="swoosh"></div>
+                    <span g-component="SeparateText" class="swoosh-title title-1 swoosh-title--active">amazing websites</span>
+                    <span g-component="SeparateText" class="swoosh-title title-2">colorful illustrations</span>
+                    <span g-component="SeparateText" class="swoosh-title title-3">impactful products</span>
+                    <span g-component="SeparateText" class="swoosh-title title-4">incredible apps</span>
+                    <span g-component="SeparateText" class="swoosh-title title-5">unforgettable brands</span>
+                </h2>
+
+                <div class="btn-wrapper">
+                    <a href="/about" style="--btn-color: #fff; --btn-text: #171259;" class="btn btn--outline" title="work">
+                        More on who we are
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.33325 8.00065H12.6666M12.6666 8.00065L7.99992 3.33398M12.6666 8.00065L7.99992 12.6673" stroke="#FBF778" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <img class="shadow-front-bottom lazyautosizes ls-is-cached lazyloaded" src="./assets/images/shadow-dissolve.webp" data-sizes="auto" data-src="./assets/images/shadow-dissolve.webp" data-srcset="./assets/images/shadow-dissolve.webp 500w,
+            ./assets/images/shadow-dissolve.webp 640w,
+            ./assets/images/shadow-dissolve.webp 1024w" alt="shadow" sizes="1130px" srcset="./assets/images/shadow-dissolve.webp 500w,
+            ./assets/images/shadow-dissolve.webp 640w,
+            ./assets/images/shadow-dissolve.webp 1024w">
+        </div>
+
+        <section class="case-intro" data-aos="fade" data-aos-offset="0" id="buddies">
             <a class="fullsize-link" href="/work/buddies"></a>
                 <video class="case-intro__pic" width="100%" height="100%" loop muted playsinline autoplay="autoplay" style="pointer-events: none;">
                     <source src="../assets/images/buddies.mp4" type="video/webm" />
@@ -125,30 +142,7 @@
                     </div>
                 </div>
             </section>
-
-        <section class="case-intro" id="nori">
-        <a class="fullsize-link" href="/work/nori"></a>
-            <video class="case-intro__pic" width="100%" height="100%" loop muted playsinline autoplay="autoplay" style="pointer-events: none;">
-                <source src="../assets/images/web-nori3.webm" type="video/webm" />
-                <source src="../assets/images/web-nori3.mp4" type="video/mp4" />
-            </video>
-
-            <a href="/work/thredx" style="--btn-color: #040875; --btn-text: #fff;" class="btn btn--outline" title="work">Read more
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3.33325 8.00065H12.6666M12.6666 8.00065L7.99992 3.33398M12.6666 8.00065L7.99992 12.6673" stroke="#040875" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </a>
-
-            <div class="case-intro__text">
-
-                <div class="case-intro__text__inner" style="--case-color: #040875;">
-                    <p class="client-name">Norikit</p>
-                    <h2 class="heading-two">Stunning prototypes with Norikit</h2>
-                </div>
-            </div>
-        </section>
-        
-        <section class="case-intro" id="thredx">
+        <section class="case-intro" data-aos="fade" data-aos-offset="50" id="thredx">
 
             <a class="fullsize-link" href="/work/thredx"></a>
             <video class="case-intro__pic" width="100%" height="100%" loop muted playsinline autoplay="autoplay" style="pointer-events: none;">
@@ -171,8 +165,30 @@
                 </div>
             </div>
         </section>
+        
+        <section class="case-intro" data-aos="fade" data-aos-offset="50"  id="nori">
+        <a class="fullsize-link" href="/work/nori"></a>
+            <video class="case-intro__pic" width="100%" height="100%" loop muted playsinline autoplay="autoplay" style="pointer-events: none;">
+                <source src="../assets/images/web-nori3.webm" type="video/webm" />
+                <source src="../assets/images/web-nori3.mp4" type="video/mp4" />
+            </video>
 
-        <section class="case-intro" id="hom">
+            <a href="/work/thredx" style="--btn-color: #040875; --btn-text: #fff;" class="btn btn--outline" title="work">Read more
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3.33325 8.00065H12.6666M12.6666 8.00065L7.99992 3.33398M12.6666 8.00065L7.99992 12.6673" stroke="#040875" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+
+            <div class="case-intro__text">
+
+                <div class="case-intro__text__inner" style="--case-color: #040875;">
+                    <p class="client-name">Norikit</p>
+                    <h2 class="heading-two">Stunning prototypes with Norikit</h2>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-intro" data-aos="fade" data-aos-offset="50"  id="hom">
         <a class="fullsize-link" href="/work/hom"></a>
             <video class="case-intro__pic" width="100%" height="100%" loop muted playsinline autoplay="autoplay" style="pointer-events: none;">
                 <source src="../assets/images/hom-vid.mp4" type="video/webm" />
