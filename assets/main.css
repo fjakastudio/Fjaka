@@ -2290,6 +2290,13 @@ h5,
 .cta-front {
   width: 80%;
   margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+@media (max-width: 767px) {
+  .cta-front {
+    width: 100%;
+  }
 }
 .cta-front h2 {
   margin-bottom: 1rem;
