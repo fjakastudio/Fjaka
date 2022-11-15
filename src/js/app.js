@@ -223,21 +223,21 @@ if (typeof(element) != 'undefined' && element != null)
         splashThree.classList.add("swoosh-title--active");
         animationSwoosh.playSegments([0, 58], true);
         
-    }, 10000);
+    }, 8000);
 
     setTimeout(function(){
         splashThree.classList.remove("swoosh-title--active");
         splashFour.classList.add("swoosh-title--active");
         animationSwoosh.playSegments([0, 58], true);
         
-    }, 15000);
+    }, 11000);
 
     setTimeout(function(){
         splashFour.classList.remove("swoosh-title--active");
         splashFive.classList.add("swoosh-title--active");
         animationSwoosh.playSegments([0, 58], true);
         
-    }, 18000);
+    }, 14000);
 }
 
 
