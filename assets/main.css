@@ -1304,7 +1304,7 @@ a {
 @media (max-width: 767px) {
   #header nav a::before {
     height: 3px;
-    background: var(--main-yellow) !important;
+    background: #fff !important;
   }
 }
 #header nav a:hover::before {
@@ -2373,6 +2373,8 @@ body.front .logo path {
   flex-direction: column;
   text-align: center;
   justify-content: center;
+  overflow: hidden;
+  position: relative;
 }
 @media (max-width: 767px) {
   .front-info__text {
@@ -3416,14 +3418,14 @@ body.work .logo path {
   }
 }
 .active-menu .logo path {
-  fill: var(--main-yellow) !important;
+  fill: #fff !important;
 }
-.active-menu#header nav {
+.active-menu #header nav {
   opacity: 1;
-  visibility: bodyvisible;
+  visibility: visible;
 }
 @media (max-width: 767px) {
-  #header.active-menu {
+  .active-menu #header {
     mix-blend-mode: normal !important;
   }
 }
@@ -3436,7 +3438,7 @@ body.work .logo path {
     bottom: 0;
     top: 0;
     background: #0e0b36;
-    color: var(--main-yellow);
+    color: #fff;
     z-index: 1;
     padding-top: 5rem;
     align-items: center;
@@ -3494,7 +3496,7 @@ body.work .logo path {
 }
 .active-menu .menu-icon span:nth-child(1),
 .active-menu .menu-icon span:nth-child(3) {
-  background-color: var(--main-yellow);
+  background-color: #fff;
   top: calc(50% - 4px);
   top: 0.5rem;
 }
