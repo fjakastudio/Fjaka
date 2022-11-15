@@ -2799,7 +2799,7 @@ body.work .logo path {
 }
 @media (max-width: 767px) {
   .case-intro__text {
-    padding: 1.5rem 1rem 6rem 1.5rem;
+    padding: 1.5rem 1rem 6rem 1rem;
   }
   .case-intro__text .btn {
     display: none;
