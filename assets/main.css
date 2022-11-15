@@ -1345,6 +1345,7 @@ a {
 @media (max-width: 767px) {
   .header-big {
     padding: 0 1rem;
+    border-radius: 0;
   }
 }
 .header-big__bg {
