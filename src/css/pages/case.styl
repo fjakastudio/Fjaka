@@ -20,16 +20,16 @@ body.hom
     transition: 0s;
 
 body.hom .logo path 
-    fill: #DC5842
+    fill: #1e2524
 
 .hom .text-link
-    color: #DC5842
+    color: #1e2524
 
 .hom .header nav a::before 
-    background: #DC5842   
+    background: #1e2524   
 
 .hom .menu-icon span {
-    background-color: #DC5842
+    background-color: #1e2524
 }
 
 body.ls 
@@ -156,6 +156,36 @@ body.thredx .logo path
 .thredx .menu-icon span {
     background-color: #fff
 }
+
+body.buddies 
+    background-color: #F4F2E4
+    transition: 0s;
+
+body.buddies .logo path 
+    fill: #FF0000
+
+.buddies .text-link
+    color: #FF0000
+
+.buddies .header nav a::before 
+    background: #FF0000
+
+.buddies .menu-icon span {
+    background-color: #FF0000
+}
+
+.case-vid
+    width: 100%
+    height: auto
+
+.work .wrapper-inner
+    margin-top: 6vw
+
+    .big-header-one
+        margin-bottom: 3rem
+
+        @media $mobile
+            margin-bottom: 1rem
 
 .case .wrapper-inner
     padding: 0 2.5rem;
@@ -304,6 +334,13 @@ body.thredx .logo path
         grid-column-start: 4;
         grid-column-end: 10;
         text-align: center
+
+    &--masonry-1
+        margin-top: 8rem
+        margin-bottom: 0
+
+    &--masonry-2
+        margin-top: -8rem
 
 .col-7
     grid-column: span 7;

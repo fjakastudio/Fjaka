@@ -1,16 +1,16 @@
 .active-menu .logo path
-    fill: var(--main-yellow) !important
+    fill: #fff !important
 
-.active-menu.header nav
+.active-menu #header nav
     opacity: 1;
     visibility: visible;
 
-.header.active-menu
+.active-menu #header
     @media $mobile
         mix-blend-mode: normal !important;
 
 @media $mobile
-    .header nav
+    #header nav
         visibility: hidden;
         position: fixed;
         left: 0;
@@ -18,7 +18,7 @@
         bottom: 0;
         top: 0;
         background: #0e0b36
-        color: var(--main-yellow);
+        color: #fff
         z-index: 1
         padding-top: 5rem
         align-items: center;
@@ -27,10 +27,10 @@
         transition: opacity .6s ease;
         opacity: 0
 
-    .header ul
+    #header ul
         flex-direction: column
 
-    .header li
+    #header li
         text-align: center
 
 .menu-icon
@@ -73,7 +73,7 @@
 }
 .active-menu .menu-icon span:nth-child(1) ,
 .active-menu .menu-icon span:nth-child(3) {
-    background-color: var(--main-yellow)
+    background-color: #fff
     top: calc(50% - 4px);
     top: .5rem;
 }
