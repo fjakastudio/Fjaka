@@ -42,7 +42,6 @@
             width: 78px;
             height: 32px;
             position: relative;
-            margin-bottom: clamp(80px, 12vh, 140px);
         }
         
         .logo-vector {
@@ -107,7 +106,7 @@
             letter-spacing: -0.05em;
             color: white;
             text-align: left;
-            margin: 0;
+            margin: auto 0;
         }
         
         /* Mobile improvements */
@@ -124,7 +123,6 @@
             .logo-group {
                 transform: scale(0.8);
                 transform-origin: left top;
-                margin-bottom: clamp(60px, 10vh, 100px);
             }
         }
     </style>
@@ -147,18 +145,5 @@
             We're a small design studio based in southern Sweden, crafting thoughtful visual identities and digital experiences for clients who value clarity, creativity, and purpose.
         </h1>
     </div>
-    
-    <!-- 
-    ALTERNATIVE: JavaScript Fluid Typography using FitText.js
-    Uncomment the script below and change font-size to a fixed value if you prefer JS control
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/FitText.js/1.2.0/jquery.fittext.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $('.main-text').fitText(0.5, { minFontSize: '20px', maxFontSize: '90px' });
-        });
-    </script>
-    -->
 </body>
 </html>
